@@ -1,28 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Juan Chavez Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Chavez | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
-  </head>
+</head>
 
-  <body>
-    <header>
-      <h1>Welcome to my portfolio!</h1>
+<body>
 
-      <!-- Navigation for multiple pages -->
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Juan Chavez</h1>
+        <h2>Cybersecurity Student & Security/Forensic Analyst in Training</h2>
+        <p>Focused on building secure systems through hands-on labs, real-world analysis, and continuous learning.</p>
+
+        <div class="hero-buttons">
+            <a href="projects.html" class="btn">View My Projects</a>
+            <a href="about.html" class="btn secondary">Learn More About Me</a>
+        </div>
     </header>
 
-    <main>
-      <p>This is the homepage of my cybersecurity portfolio.</p>
-    </main>
+    <!-- SHORT ABOUT -->
+    <section class="about">
+        <h2>Who I Am</h2>
+        <p>
+            I’m a Computer Science student at UC Merced specializing in cybersecurity, Linux security, 
+            and incident response. I enjoy solving real-world security problems and strengthening my 
+            technical foundation through hands-on labs and projects.
+        </p>
+        <a href="about.html" class="btn small">Read My Full Story</a>
+    </section>
 
-    <script src="scripts/script.js"></script>
-  </body>
+    <!-- SKILLS SNAPSHOT -->
+    <section class="skills">
+        <h2>Skills Snapshot</h2>
+        <div class="skills-grid">
+            <span>Risk Assessment</span>
+            <span>Linux Security</span>
+            <span>Network Analysis</span>
+            <span>SIEM Tools</span>
+            <span>Incident Response</span>
+            <span>Threat Modeling</span>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="project-card">
+            <h3>Security Audit of a Small Business Network</h3>
+            <p>Performed a full risk assessment, identified vulnerabilities, and recommended security controls.</p>
+            <a href="projects.html" class="btn small">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Linux File Permissions Hardening</h3>
+            <p>Configured secure permissions using chmod, chown, and group policies to enforce least privilege.</p>
+            <a href="projects.html" class="btn small">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Log Analysis & Incident Handler’s Journal</h3>
+            <p>Investigated suspicious activity, analyzed logs, and documented findings in a structured report.</p>
+            <a href="projects.html" class="btn small">View Project</a>
+        </div>
+    </section>
+
+<!-- CERTIFICATIONS -->
+<section class="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>
+            Google Cybersecurity Professional Certificate(In Progress)
+            <a href="YOUR_GOOGLE_CERTIFICATE_URL" target="_blank" class="btn small" style="margin-left: 10px;">
+                View Certificate
+            </a>
+        </li>
+
+        <li>
+            Security+ (Planned)
+            <a href="https://www.comptia.org/certifications/security" target="_blank" class="btn small secondary" style="margin-left: 10px;">
+                Learn More
+            </a>
+        </li>
+    </ul>
+</section>
+
+
+    <!-- CONTACT CTA -->
+    <section class="contact">
+        <h2>Let’s Connect</h2>
+        <p>Interested in cybersecurity, projects, or opportunities? I’d love to talk.</p>
+        <a href="contact.html" class="btn">Contact Me</a>
+    </section>
+
+</body>
 </html>
