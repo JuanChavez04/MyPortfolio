@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 3: Lab 1 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 1 – Analyze Network Attacks</h1>
+        <p>Course 3 - Connect and Protect: Networks and Network Security</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>This lab focused on analyzing a real‑world network interruption caused by a malicious actor. 
+            Using packet logs and attack indicators, I identified the type of attack, explained how it disrupted the website,
+            and interpreted TCP handshake behavior during normal and abnormal traffic. This activity strengthened my understanding of network attacks,
+            TCP/IP communication, and how to recognize signs of a Denial of Service attack in packet captures.</p>
+
+        <h2>Tools Used</h2>
+        <ul>
+            <li>Network protocol analyzer logs (TCP/HTTP)</li>
+            <li>Wireshark‑style packet interpretation</li>
+            <li>Attack pattern recognition</li>
+            <li>TCP/IP model analysis</li>
+            <li>Incident reporting and documentation skills</li>
+        </ul>
+
+        <h2>What I Learned</h2>
+        <ul>
+            <li>How to identify abnormal TCP behavior such as repeated SYN packets without completing the handshake.</li>
+            <li>How a SYN flood attack overwhelms a server by filling its connection queue.</li>
+            <li>How to distinguish legitimate traffic from malicious traffic using packet logs.</li>
+            <li>How to interpret RST, ACK, 504 Gateway Timeout, and other error indicators.</li>
+            <li>How to write a clear cybersecurity incident report explaining the attack, its cause, and its impact.</li>
+            <li>How DoS attacks degrade availability and prevent users from accessing services.</li>
+        </ul>
+        <h2>Scenario</h2>
+        <p>
+            A customer reported that the company website was timing out and failing to load. As a cybersecurity analyst,
+            I was tasked with reviewing TCP/HTTP logs to determine the cause of the interruption. The logs showed a mix of normal employee traffic 
+            and suspicious repeated SYN packets from an unknown external IP address. My goal was to identify the attack type, explain how it disrupted the website,
+            and document the findings in an incident report.
+        </p>
+        <h2>My Analysis</h2>
+        <p>
+            I examined the TCP logs and found that the attacker at IP 203.0.113.0 repeatedly sent SYN packets to the web server on port 443 without completing the handshake.
+            This created numerous half‑open connections, consuming server resources and preventing legitimate users from connecting.
+        </p>
+        <p>Normal traffic (highlighted in green) showed the expected SYN → SYN/ACK → ACK sequence, followed by HTTP GET requests and successful responses. However, as the attack intensified, 
+            the server began responding with RST, ACK packets and 504 Gateway Timeout errors, indicating it could no longer process legitimate requests.</p>
+            
+            <p>Based on the traffic pattern, the repeated SYN packets, and the server’s inability to complete handshakes, I concluded that this was a TCP SYN Flood DoS attack. I documented the attack,
+            explained the handshake disruption, and described the negative impact on website availability in the incident report.</p>
+        <div class="image-grid">
+            <embed src="Cybersecurity incident report.pdf" type="application/pdf" width="100%" height="600px" />
+            <embed src="How to read a Wireshark TCP_HTTP log.pdf" type="application/pdf" width="100%" height="600px" />
+            <embed src="Wireshark TCP_HTTP log - TCP log.pdf" type="application/pdf" width="100%" height="600px" />
+        </div>
+    </section>
+
+</body>
+</html>

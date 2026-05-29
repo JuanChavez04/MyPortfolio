@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 3: Lab 2 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 2 – Applying OS Hardening Techniques</h1>
+        <p>Course 3 - Connect and Protect: Networks and Network Security</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>In this lab, I investigated a security incident affecting the website
+        <strong>yummyrecipesforme.com</strong>. Using a <code>tcpdump</code> traffic log, I analyzed DNS
+        and HTTP activity between a user’s machine and multiple web servers to identify what happened,
+        which network protocols were involved, and how the user was redirected to a potentially malicious
+        site. I then documented the incident in a structured security report and recommended a mitigation
+        to reduce the risk of similar attacks in the future.</p>
+
+        <h2>Tools Used</h2>
+        <ul>
+            <li><strong>tcpdump</strong> network traffic log</li>
+            <li><strong>DNS and HTTP</strong> protocol analysis</li>
+            <li><strong>Linux-style log interpretation</strong> (timestamps, flags, ports)</li>
+            <li><strong>Security incident reporting</strong> and documentation</li>
+        </ul>
+
+        <h2>What I Learned</h2>
+        <ul>
+            <li>
+                <strong>DNS and HTTP behavior:</strong> How DNS queries resolve domain names to IP addresses and how HTTP
+                connections are established over TCP (port 80).
+            </li>
+            <li>
+                <strong>Reading tcpdump logs:</strong> How to interpret source/destination, ports, flags, and HTTP GET
+                requests to reconstruct what happened during an incident.
+            </li>
+            <li>
+                <strong>Detecting malicious redirects:</strong> How multiple DNS lookups and changing destination IPs can
+                indicate DNS spoofing or redirection to a spoofed site.
+            </li>
+            <li>
+                <strong>Incident documentation:</strong> How to clearly describe the protocol used, the sequence of events,
+                and the likely attack behavior in a security incident report.
+            </li>
+            <li>
+                <strong>Mitigation thinking:</strong> How to propose a concrete remediation (like MFA or other controls) to
+                reduce the impact of similar attacks.
+            </li>
+        </ul>
+        <h2>Scenario</h2>
+        <p>
+            As a cybersecurity analyst for <strong>yummyrecipesforme.com</strong>, I was notified that visitors were
+            experiencing a security issue when loading the main webpage. My task was to review captured
+            network traffic, identify which protocols were involved, determine what occurred during the
+            incident, and recommend a security measure to prevent similar problems in the future.
+        </p>
+        <p>
+            The provided <code>tcpdump</code> log showed DNS queries for <strong>yummyrecipesforme.com</strong> and later
+            for <strong>greatrecipesforme.com</strong>, followed by HTTP connections to different IP addresses. This
+            pattern suggested that users might have been redirected away from the legitimate site to another
+            domain that could host malicious content.
+        </p>
+        <h2>My Analysis</h2>
+        <p>
+            First, I identified the network protocols involved in the incident. The log showed DNS queries
+            resolving domain names (e.g., <code>yummyrecipesforme.com</code> and <code>greatrecipesforme.com</code>) and
+            HTTP traffic over port 80. These protocols were central to how the attack unfolded.
+        </p>
+        <p>
+            The <code>tcpdump</code> entries indicated that the user’s machine performed a normal DNS lookup for
+            <strong>yummyrecipesforme.com</strong>, which resolved to IP <code>203.0.113.22</code>. A standard TCP
+            three-way handshake followed, along with an HTTP <code>GET / HTTP/1.1</code> request to that server. After
+            some time, another DNS query was made for <strong>greatrecipesforme.com</strong>, which resolved to a
+            different IP (<code>192.0.2.17</code>), and a new HTTP connection was established to that host.
+        </p>
+        <p>
+            This shift from the legitimate domain to a different domain and IP suggests a malicious redirect,
+            likely due to DNS spoofing or malware manipulating DNS responses. The attacker effectively
+            redirected traffic from the original site to a spoofed domain, where users could be exposed to
+            malicious content or phishing pages.
+        </p>
+        <p>
+            In the incident report, I documented the protocols involved (DNS and HTTP), the sequence of
+            events, and the evidence of redirection. For remediation, I recommended implementing stronger
+            security controls—such as multi-factor authentication (MFA) and improved DNS security
+            measures—to reduce the impact of credential theft and malicious redirection in future incidents.
+        </p>
+        <div class="image-grid">
+                <embed src="Security incident report template.pdf"type="application/pdf" width="100%" height="600px" />
+                <embed src="tcpdump traffic log.pdf"type="application/pdf" width="100%" height="600px" />
+                <embed src="How to read the tcpdump traffic log.pdf"type="application/pdf" width="100%" height="600px" />
+        </div>
+    </section>
+
+</body>
+</html>

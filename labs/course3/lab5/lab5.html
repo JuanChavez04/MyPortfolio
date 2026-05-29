@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 3: Lab 5 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 5 – Analyzing network layer communication</h1>
+        <p>Course 3 - Connect and Protect: Networks and Network Security</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I analyzed DNS and ICMP traffic using packet data from a network protocol analyzer. 
+            The goal was to identify which network protocol was involved in a service interruption and 
+            determine whether the traffic patterns indicated a potential cybersecurity incident. This activity 
+            strengthened my understanding of how the Internet layer of the TCP/IP model handles packet 
+            delivery and how ICMP responses can reveal network issues or misconfigurations.
+        </p>
+
+        <h2>Tools Used</h2>
+        <ul>
+            <li><strong>Network protocol analyzer logs</strong> (DNS & ICMP)</li>
+            <li><strong>TCP/IP model analysis</strong></li>
+            <li><strong>Packet inspection techniques</strong></li>
+            <li><strong>Incident documentation</strong></li>
+        </ul>
+
+        <h2>What I Learned</h2>
+        <ul>
+            <li>
+                <strong>How DNS queries work:</strong> DNS uses UDP port 53 to resolve domain names into IP addresses.
+            </li>
+            <li>
+                <strong>How ICMP operates:</strong> ICMP is used for error reporting and diagnostics, such as 
+                “destination unreachable” messages.
+            </li>
+            <li>
+                <strong>How to identify abnormal traffic:</strong> Repeated DNS queries followed by ICMP port 
+                unreachable errors can indicate misconfigurations, outages, or malicious interference.
+            </li>
+            <li>
+                <strong>How to interpret packet logs:</strong> Timestamps, source/destination IPs, ports, and protocol 
+                types reveal the sequence of events during a network issue.
+            </li>
+            <li>
+                <strong>How to document findings:</strong> I practiced summarizing network behavior and identifying 
+                which protocol was responsible for the interruption.
+            </li>
+        </ul>
+        <h2>Scenario</h2>
+        <p>
+            A user attempted to access <strong>yummyrecipesforme.com</strong>, but the website failed to load. 
+            As a cybersecurity analyst, I reviewed DNS and ICMP packet logs to determine what happened. 
+            The logs showed repeated DNS queries to a DNS server, followed by ICMP responses indicating 
+            that UDP port 53 was unreachable. My task was to identify the protocol involved and explain 
+            what the traffic revealed about the incident.
+        </p>
+        <h2>My Analysis</h2>
+        <p>
+            The packet logs showed multiple DNS queries from the user’s machine to the DNS server 
+            <code>203.0.113.2</code>, attempting to resolve <strong>yummyrecipesforme.com</strong>. Each query was 
+            followed by an ICMP message stating that UDP port 53 was unreachable. This indicates that the 
+            DNS server was either offline, misconfigured, or intentionally blocking DNS requests.
+        </p>
+
+        <p>
+            Because DNS relies on UDP port 53, the ICMP “port unreachable” responses confirm that the 
+            issue occurred at the <strong>Internet layer</strong> of the TCP/IP model. Without a valid DNS response, the 
+            user’s machine could not obtain the IP address of the website, resulting in a failed connection.
+        </p>
+
+        <p>
+            Based on the traffic pattern, the protocol involved in the incident was <strong>ICMP</strong>, which reported 
+            the failure of DNS (UDP port 53). This type of behavior can indicate a network outage, firewall 
+            misconfiguration, or potential malicious interference with DNS resolution.
+        </p>
+
+        <p>These images show the DNS queries and ICMP port unreachable responses captured during the incident:</p>
+        
+            <img src="Screenshot 2026-05-20 132438.png" alt="DNS and ICMP traffic log" style="width:100%; max-width:800px;">
+            <embed src="Cybersecurity incident report.pdf"type="application/pdf" width="100%" height="600px" />
+    </section>
+
+</body>
+</html>

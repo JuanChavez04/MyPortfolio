@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 3: lab 4 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>lab 4 – Use the NIST cybersecurity framework to respond to a security incident</h1>
+        <p>Course 3 - Connect and Protect: Networks and Network Security</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I analyzed a Denial-of-Service (DoS) attack using the 
+            <strong>NIST Cybersecurity Framework (CSF)</strong>. I reviewed an incident involving 
+            ICMP flooding caused by a misconfigured firewall and documented the event using 
+            the five NIST CSF functions: Identify, Protect, Detect, Respond, and Recover. 
+            This activity helped me understand how to structure an incident report, evaluate 
+            root causes, and propose improvements to strengthen an organization’s security posture.
+        </p>
+
+        <h2>Tools Used</h2>
+        <ul>
+            <li><strong>NIST Cybersecurity Framework (CSF)</strong></li>
+            <li><strong>Incident response documentation</strong></li>
+            <li><strong>Firewall and network traffic analysis</strong></li>
+            <li><strong>SIEM and log monitoring concepts</strong></li>
+        </ul>
+
+        <h2>What I Learned</h2>
+        <ul>
+            <li>
+                <strong>How to apply the NIST CSF:</strong> I learned how each function 
+                (Identify, Protect, Detect, Respond, Recover) guides the lifecycle of 
+                incident handling and long-term security improvement.
+            </li>
+            <li>
+                <strong>Root cause analysis:</strong> Misconfigured firewalls can allow 
+                malicious traffic—such as ICMP floods—to bypass protections and disrupt services.
+            </li>
+            <li>
+                <strong>Importance of monitoring:</strong> SIEM alerts, IDS/IPS logs, and 
+                traffic analysis are essential for detecting abnormal patterns early.
+            </li>
+            <li>
+                <strong>Incident response workflow:</strong> Blocking malicious traffic, 
+                isolating systems, restoring services, and documenting actions are critical steps.
+            </li>
+            <li>
+                <strong>Recovery and improvement:</strong> Updating baselines, auditing 
+                configurations, and training staff help prevent similar incidents in the future.
+            </li>
+        
+        </ul>
+        <h2>Scenario</h2>
+        <p>
+            A company experienced a two-hour outage caused by a DoS attack in which an 
+            external actor flooded the network with ICMP packets. The firewall was 
+            misconfigured and failed to block the traffic, allowing the attack to overwhelm 
+            internal systems. As a security analyst, I was tasked with analyzing the incident 
+            using the NIST CSF, documenting what happened, and recommending improvements 
+            to prevent future disruptions.
+        </p>
+        <h2>My Analysis</h2>
+        <p>
+            Using the NIST CSF, I broke down the incident into the five core functions:
+        </p>
+
+        <p><strong>Identify:</strong>  
+            The attack was a DoS event using ICMP packets. Affected systems included the 
+            internal network, DNS services, and the firewall. The root cause was a 
+            misconfigured firewall that allowed ICMP traffic to pass unchecked.
+        </p>
+
+        <p><strong>Protect:</strong>  
+            To prevent recurrence, the organization should properly configure firewall rules, 
+            maintain secure baseline configurations, apply patch updates, and implement 
+            multi-factor authentication for administrative access. Regular rule reviews and 
+            documentation updates are essential.
+        </p>
+
+        <p><strong>Detect:</strong>  
+            Detection can be improved by using SIEM tools to monitor for abnormal ICMP 
+            patterns, setting alerts for traffic spikes, and reviewing IDS/IPS logs to identify 
+            suspicious activity early.
+        </p>
+
+        <p><strong>Respond:</strong>  
+            The response included blocking incoming ICMP traffic, isolating affected systems, 
+            restoring critical services, analyzing logs to confirm the attack source, and 
+            notifying the incident response team. These actions helped contain the attack 
+            and restore functionality.
+        </p>
+
+        <p><strong>Recover:</strong>  
+            Recovery steps included restoring all network services, verifying firewall 
+            configurations, updating baseline documentation, conducting a post-incident 
+            review, and scheduling regular audits and staff training to prevent similar 
+            incidents in the future.
+        </p>
+
+        <p>
+            This structured approach demonstrated how the NIST CSF helps organizations 
+            manage incidents effectively and continuously improve their security posture.
+        </p>
+            <embed src="Incident report analysis.pdf"type="application/pdf" width="100%" height="600px" />
+            <embed src="Applying the NIST CSF .pdf"type="application/pdf" width="100%" height="600px" />
+    </section>
+
+</body>
+</html>

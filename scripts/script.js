@@ -63,4 +63,3 @@ accordions.forEach(acc => {
         }
     });
 });
-
