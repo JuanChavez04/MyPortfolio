@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 7 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 7 – Use Linux commands to manage file permissions</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I examined and modified file and directory permissions in a Linux 
+            environment. These skills are essential for configuring user authorization and 
+            ensuring that sensitive files are only accessible to the correct users. I used 
+            <strong>ls -l</strong> to inspect permissions and <strong>chmod</strong> to correct overly permissive 
+            access settings based on the principle of least privilege.
+        </p>
+
+        <h2>Task 1 – Check Permissions for Files in a Directory</h2>
+        <p>
+            I used the <code>ls -l</code> command to review the permissions of all files in the 
+            <code>/home/researcher2/projects</code> directory. This allowed me to identify files that 
+            granted unnecessary read or write access to group or other users.
+        </p>
+
+        <h2>Task 2 – Identify and Correct Incorrect Permissions</h2>
+        <p>
+            Several files had permissions that violated the principle of least privilege. 
+            I used <code>chmod</code> to remove unnecessary access:
+        </p>
+        <ul>
+            <li><strong>project_k.txt</strong>: removed group and other write access</li>
+            <li><strong>project_m.txt</strong>: removed group read access</li>
+            <li><strong>project_r.txt</strong>: removed group write and other read access</li>
+            <li><strong>project_t.txt</strong>: removed group write and other read access</li>
+        </ul>
+
+        <h2>Task 3 – Correct Permissions on a Hidden File</h2>
+        <p>
+            The hidden file <code>.project_x.txt</code> had insecure permissions that allowed group 
+            users to write to the file. I removed group write access to ensure only the owner 
+            could modify it.
+        </p>
+
+        <h2>Task 4 – Restrict Access to a Directory</h2>
+        <p>
+            The <code>drafts/</code> directory allowed group users to execute (enter) the directory. 
+            I restricted group and other access to ensure only the owner could access or 
+            modify the directory contents.
+        </p>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab strengthened my understanding of Linux file permissions and how to 
+            manage them effectively. I practiced interpreting permission strings, identifying 
+            security risks, and applying the principle of least privilege. These skills are 
+            essential for securing file systems and preventing unauthorized access in 
+            professional environments.
+        </p>
+
+        <p>Supporting documents from the lab:</p>
+        <embed src="Current file permissions.pdf"
+               type="application/pdf" width="100%" height="600px" />
+
+        <embed src="File permissions in Linux.pdf"
+               type="application/pdf" width="100%" height="600px" />
+    </section>
+
+</body>
+</html>

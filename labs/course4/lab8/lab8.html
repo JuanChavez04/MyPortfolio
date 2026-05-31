@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 8 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 8 – Add and Manage Users with Linux Commmands</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced adding users, modifying user access, assigning group 
+            membership, and removing users from a Linux system. These tasks are essential 
+            for managing authentication and ensuring that users have the correct permissions 
+            in a secure environment.
+        </p>
+
+        <h2>Task 1 – Add a New Employee</h2>
+        <p>
+            I created a new user account using the <code>useradd</code> command. This is the first step 
+            in onboarding a new employee and giving them access to the system.
+        </p>
+
+        <h2>Task 2 – Change Ownership of a File</h2>
+        <p>
+            I used the <code>chown</code> command to assign ownership of a file to the new user. 
+            This ensures that the employee has the correct permissions to work with the 
+            files they are responsible for.
+        </p>
+
+        <h2>Task 3 – Add the Employee to a Group</h2>
+        <p>
+            I added the new user to an additional group using <code>usermod -a -G</code>. 
+            Group membership determines what shared resources the user can access.
+        </p>
+
+        <h2>Task 4 – Delete the Employee from the System</h2>
+        <p>
+            I removed the user account using <code>userdel</code>. I also removed the user’s 
+            associated group when necessary. This step is important when an employee 
+            leaves the organization or no longer needs system access.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-22 132441.png" 
+                 alt="Terminal output showing useradd, usermod, chown, and userdel commands" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Managing user accounts and group membership using Linux commands.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab helped me understand how Linux handles user accounts and group 
+            permissions. I practiced creating users, modifying their access, assigning them 
+            to groups, and removing them when necessary. These skills are essential for 
+            managing authentication and maintaining secure access control in a Linux 
+            environment.
+        </p>
+    </section>
+
+</body>
+</html>

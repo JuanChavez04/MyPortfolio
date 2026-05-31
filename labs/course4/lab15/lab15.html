@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 15 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 15 – Complete a Join</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I used <strong>INNER JOIN</strong>, <strong>LEFT JOIN</strong>, and <strong>RIGHT JOIN</strong> 
+            to combine data from multiple tables in a MariaDB database. These joins allowed me to connect 
+            employee information, machine details, and login activity to better understand how data relates 
+            across the organization.
+        </p>
+
+        <h2>Task 1 – Use an INNER JOIN to Find Information on Employees and Their Machines</h2>
+        <p>
+            I used an <code>INNER JOIN</code> to combine the <code>machines</code> and <code>employees</code> 
+            tables based on matching <code>device_id</code> values. This join returns only the rows where 
+            both tables contain matching device IDs, allowing me to see which employees are assigned to 
+            which machines.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 115007.png" 
+                 alt="INNER JOIN between machines and employees" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>INNER JOIN showing employees matched with their assigned machines.</figcaption>
+        </figure>
+
+        <h2>Task 2 – Use LEFT JOIN and RIGHT JOIN to Compare Machine and Employee Records</h2>
+        <p>
+            I used a <code>RIGHT JOIN</code> to return all employees, including those who do not have a 
+            matching device in the <code>machines</code> table. This is useful for identifying employees 
+            who may not have a registered machine or whose device information is missing.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 115330.png" 
+                 alt="RIGHT JOIN between machines and employees" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>RIGHT JOIN showing all employees, including those without machine records.</figcaption>
+        </figure>
+
+        <p>
+            LEFT JOIN was also explored conceptually in this lab, which would return all machines even if 
+            some do not have an assigned employee. This helps identify unused or unassigned devices in the 
+            organization.
+        </p>
+
+        <h2>Task 3 – Use an INNER JOIN to Find Information on Employees and Their Login Attempts</h2>
+        <p>
+            I used an <code>INNER JOIN</code> between the <code>employees</code> and 
+            <code>log_in_attempts</code> tables using the <code>username</code> field. This allowed me to 
+            connect each login attempt to the employee who performed it, which is essential for 
+            investigating suspicious login activity.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 115514.png" 
+                 alt="INNER JOIN between employees and login attempts" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>INNER JOIN linking employees to their login attempts.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab helped me understand how SQL joins can be used to connect related data across 
+            multiple tables. INNER JOIN allowed me to focus on matching records, while RIGHT JOIN helped 
+            identify missing machine assignments. These techniques are essential for cybersecurity 
+            investigations, asset tracking, and analyzing authentication patterns.
+        </p>
+
+    </section>
+
+</body>
+</html>

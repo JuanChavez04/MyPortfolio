@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 1 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 1 – Installing Software in a Linux Distribution</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced installing, uninstalling, and verifying software packages 
+            in a Linux distribution using the APT package manager. I worked with two 
+            cybersecurity tools: <strong>Suricata</strong> and <strong>tcpdump</strong>. This activity helped me 
+            understand how Linux handles package installation, dependencies, and system 
+            verification through command‑line tools.
+        </p>
+
+        <h2>Task 1 – Confirm APT is Installed</h2>
+        <p>
+            I confirmed that the APT package manager was available by running a basic APT 
+            command. This verified that the system was ready for software installation and 
+            management.
+        </p>
+
+        <h2>Task 2 – Install and Uninstall Suricata</h2>
+        <p>
+            I installed Suricata using the command:
+        </p>
+        <pre><code>sudo apt install suricata</code></pre>
+        <p>
+            The terminal displayed the list of dependencies and installation progress. After 
+            verifying the installation, I uninstalled Suricata using:
+        </p>
+        <pre><code>sudo apt remove suricata</code></pre>
+
+        <!-- IMAGE 1: Suricata installation -->
+        <figure>
+            <img src="Screenshot 2026-05-21 124530.png" alt="Suricata installation terminal output" style="width:100%; max-width:800px;">
+            <figcaption>Installing Suricata using APT.</figcaption>
+        </figure>
+
+        <h2>Task 3 – Install tcpdump</h2>
+        <p>
+            Next, I installed <strong>tcpdump</strong>, a command‑line packet capture tool, using:
+        </p>
+        <pre><code>sudo apt install tcpdump</code></pre>
+        <p>
+            The installation completed successfully, and the lab system confirmed the task.
+        </p>
+
+        <!-- IMAGE 2: tcpdump installation -->
+        <figure>
+            <img src="Screenshot 2026-05-21 125153.png" alt="tcpdump installation terminal output" style="width:100%; max-width:800px;">
+            <figcaption>Installing tcpdump using APT.</figcaption>
+        </figure>
+
+        <h2>Task 4 – Verify Installed Applications</h2>
+        <p>
+            I used the following command to list installed applications:
+        </p>
+        <pre><code>apt list --installed</code></pre>
+        <p>
+            I confirmed that <strong>tcpdump</strong> appeared in the list, while Suricata did not (because it 
+            had been removed earlier).
+        </p>
+
+        <!-- IMAGE 3: apt list showing tcpdump -->
+        <figure>
+            <img src="Screenshot 2026-05-21 125038.png" alt="APT list showing tcpdump installed" style="width:100%; max-width:800px;">
+            <figcaption>Verifying tcpdump installation using <code>apt list --installed</code>.</figcaption>
+        </figure>
+
+        <h2>Task 5 – Reinstall Suricata</h2>
+        <p>
+            I reinstalled Suricata using:
+        </p>
+        <pre><code>sudo apt install suricata</code></pre>
+        <p>
+            After reinstalling, I again used <code>apt list --installed</code> to confirm that both 
+            <strong>suricata</strong> and <strong>tcpdump</strong> were installed.
+        </p>
+
+        <!-- IMAGE 4: apt list showing Suricata reinstalled -->
+        <figure>
+            <img src="Screenshot 2026-05-21 125313.png" alt="APT list showing Suricata installed" style="width:100%; max-width:800px;">
+            <figcaption>Verifying Suricata and tcpdump are both installed.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab helped me understand how Linux manages software installation, 
+            dependencies, and system verification. I gained hands‑on experience using APT 
+            to install, remove, and audit applications—skills that are essential for system 
+            administration and cybersecurity operations.
+        </p>
+
+    </section>
+
+</body>
+</html>

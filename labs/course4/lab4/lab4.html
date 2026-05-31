@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 4 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 4 – Filter with Grep</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced using the <strong>grep</strong> command to search for specific strings 
+            inside files and filter information efficiently. I worked with quarterly user reports 
+            and log files to locate usernames, departments, and other important data. 
+            This lab strengthened my ability to extract meaningful information from text files 
+            using Linux command-line tools.
+        </p>
+
+        <h2>Task 1 – Search for Error Messages in a File</h2>
+        <p>
+            I used the <code>grep</code> command to search for error messages inside log files. 
+            This demonstrated how grep can quickly filter relevant lines without manually 
+            scrolling through the entire file.
+        </p>
+        
+        <h2>Task 2 – Search for Files Containing a Specific String</h2>
+        <p>
+            I used grep to search across multiple files for specific keywords. This is useful 
+            when working with large directories or when trying to locate files that contain 
+            certain information.
+        </p>
+
+        <h2>Task 3 – Search for Information in User Files</h2>
+        <p>
+            I navigated into the <code>reports/users</code> directory and used grep to extract 
+            specific user information from quarterly reports. For example, I searched for 
+            deleted users and new hires in different departments.
+        </p>
+
+        <figure>
+        <img src="Screenshot 2026-05-22 093706.png" alt="Terminal output showing grep filtering across quarterly user files" style="width:100%; max-width:900px;">
+        <figcaption>Using <code>grep</code> to filter user data across quarterly report files.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab helped me understand how powerful grep is for searching through logs 
+            and structured text files. Being able to filter information quickly is essential 
+            for cybersecurity work, especially when analyzing logs, user activity, or 
+            system events. I also reinforced my skills in navigating directories and 
+            working with multiple files in the Bash shell.
+        </p>
+    </section>
+
+</body>
+</html>

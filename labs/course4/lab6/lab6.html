@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 6 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 6 – Managing Authorization</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I learned how to examine and modify file permissions in Linux. These 
+            skills are essential for configuring user authorization and ensuring that files and 
+            directories have the correct access levels. I used the <strong>ls -l</strong> command to inspect 
+            permissions and the <strong>chmod</strong> command to correct or restrict access where needed.
+        </p>
+
+        <h2>Task 1 – Check Permissions for Files in a Directory</h2>
+        <p>
+            I used the <code>ls -l</code> command to view the permissions of all files in the 
+            <code>projects</code> directory. This allowed me to identify which files had incorrect or 
+            overly permissive access settings.
+        </p>
+        
+        <h2>Task 2 – Correct Incorrect File Permissions</h2>
+        <p>
+            I used the <code>chmod</code> command to adjust permissions for specific files. 
+            For example, I removed write permissions for “others” on one file and removed 
+            read permissions for the group on another. This ensured that only authorized 
+            users could modify or view sensitive files.
+        </p>
+
+        <h2>Task 3 – Remove Unauthorized Access to a Directory</h2>
+        <p>
+            I restricted access to the <code>drafts</code> directory by modifying its permissions. 
+            This prevented unauthorized users from executing or accessing the directory 
+            contents, improving overall security.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-22 123817.png" 
+                 alt="Terminal output showing ls -l and chmod permission changes" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Managing file and directory permissions using <code>chmod</code>.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab helped me understand how Linux handles file permissions and how to 
+            modify them using symbolic and numeric modes. Being able to identify incorrect 
+            permissions and correct them is a critical skill for maintaining secure systems and 
+            preventing unauthorized access.
+        </p>
+    </section>
+
+</body>
+</html>

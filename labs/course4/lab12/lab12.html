@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 12 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 12 – Applying More filters in SQL</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced applying additional SQL filters to retrieve specific login 
+            activity from a database. I used comparison operators, date ranges, and time 
+            filters to analyze login attempts. These skills are essential for investigating 
+            authentication patterns and identifying unusual activity.
+        </p>
+
+        <h2>Task 1 – Filter for Login Attempts Made After a Certain Date</h2>
+        <p>
+            I used the <code>WHERE</code> clause with a greater‑than operator to return login attempts 
+            that occurred after a specific date. This is useful for narrowing down recent 
+            activity or focusing on a particular investigation window.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 101017.png" 
+                 alt="SQL query filtering login attempts after a specific date" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering login attempts where <code>login_date > '2022‑05‑09'</code>.</figcaption>
+        </figure>
+
+        <h2>Task 2 – Filter for Login Attempts in a Date Range</h2>
+        <p>
+            I used the <code>BETWEEN</code> operator to return login attempts within a specific date 
+            range. This helped isolate activity between May 9 and May 11.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 101046.png" 
+                 alt="SQL query filtering login attempts between two dates" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Using <code>BETWEEN</code> to filter login attempts by date range.</figcaption>
+        </figure>
+
+        <h2>Task 3 – Filter for Login Attempts at a Certain Time</h2>
+        <p>
+            I filtered login attempts by time using <code>BETWEEN</code> on the <code>login_time</code> 
+            column. This allowed me to analyze activity that occurred between 06:00 and 07:00.
+        </p>
+        
+        <figure>
+            <img src="Screenshot 2026-05-25 101127.png" 
+                 alt="SQL query filtering login attempts by time range" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering login attempts between <code>06:00:00</code> and <code>07:00:00</code>.</figcaption>
+        </figure>
+
+        <h2>Task 4 – Filter for Login Attempts by ID</h2>
+        <p>
+            I filtered login attempts by event ID using a comparison operator. This returned 
+            all login attempts with an event ID of 100 or greater.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 101157.png" 
+                 alt="SQL query filtering login attempts by event ID" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering login attempts where <code>event_id >= 100</code>.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab strengthened my ability to apply SQL filters using comparison operators, 
+            date ranges, and time ranges. These techniques are essential for analyzing 
+            authentication logs, identifying suspicious behavior, and extracting meaningful 
+            insights from relational databases.
+        </p>
+    </section>
+
+</body>
+</html>

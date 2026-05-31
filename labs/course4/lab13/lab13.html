@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 13 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 13 – Applying More filters in SQL</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced using the <strong>AND</strong>, <strong>OR</strong>, and <strong>NOT</strong> operators 
+            to filter SQL query results. These operators allow for more precise data retrieval 
+            and are essential for analyzing employee information, login activity, and 
+            department‑level data in relational databases.
+        </p>
+
+        <h2>Task 1 – Filter for Login Attempts That Occurred After Hours</h2>
+        <p>
+            I used the <code>AND</code> operator to filter login attempts that occurred after 18:00 
+            and were unsuccessful. This type of filtering is useful for identifying suspicious 
+            activity outside normal business hours.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 105855.png"
+                 alt="SQL query filtering failed login attempts after 18:00"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering failed login attempts after hours using <code>AND</code>.</figcaption>
+        </figure>
+
+        <h2>Task 2 – Filter for Login Attempts on Specific Dates</h2>
+        <p>
+            I used the <code>OR</code> operator to return login attempts that occurred on either 
+            May 8 or May 9. This demonstrated how to retrieve records that match 
+            multiple conditions.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 105928.png"
+                 alt="SQL query filtering login attempts on specific dates"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Using <code>OR</code> to filter login attempts on two specific dates.</figcaption>
+        </figure>
+
+        <h2>Task 3 – Filter for Login Attempts from Specific Locations</h2>
+        <p>
+            I used the <code>NOT</code> operator to exclude login attempts from countries starting 
+            with “MEX”. This is useful when focusing on activity from all other regions.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 105956.png"
+                 alt="SQL query excluding login attempts from MEX"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Excluding login attempts from locations starting with “MEX”.</figcaption>
+        </figure>
+
+        <h2>Task 4 – Filter for Employees in Specific Departments</h2>
+        <p>
+            I used the <code>AND</code> operator to filter employees who work in the Marketing 
+            department and whose office is located in the East region.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 110053.png"
+                 alt="SQL query filtering Marketing employees in East offices"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Using <code>AND</code> to filter Marketing employees in East offices.</figcaption>
+        </figure>
+
+        <h2>Task 5 – Filter for Employees in Finance or Sales</h2>
+        <p>
+            I used the <code>OR</code> operator to return employees who work in either the Finance 
+            or Sales departments. This is helpful when analyzing multiple related groups.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 110116.png"
+                 alt="SQL query filtering employees in Finance or Sales"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Using <code>OR</code> to return employees in Finance or Sales.</figcaption>
+        </figure>
+
+        <h2>Task 6 – Filter for Employees Not in a Specific Department</h2>
+        <p>
+            I used the <code>NOT</code> operator to exclude employees in the Information Technology 
+            department. This returned all employees in other departments.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 110140.png"
+                 alt="SQL query excluding employees in IT department"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Using <code>NOT</code> to exclude the Information Technology department.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab strengthened my understanding of SQL logical operators and how to 
+            combine conditions to retrieve precise datasets. These filtering techniques are 
+            essential for analyzing employee information, monitoring login activity, and 
+            supporting cybersecurity investigations.
+        </p>
+    </section>
+
+</body>
+</html>

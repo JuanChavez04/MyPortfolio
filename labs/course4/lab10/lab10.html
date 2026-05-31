@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 10 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 10 – Perform a SQL Query</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced retrieving information from a MariaDB database using SQL queries. 
+            I explored how to return specific columns, filter data, and sort results. These skills are 
+            essential for analyzing organizational data, investigating login activity, and reviewing 
+            device information.
+        </p>
+
+        <h2>Task 1 – Return Information on Employee Devices</h2>
+        <p>
+            I queried the <code>machines</code> table to return device information such as device IDs, 
+            operating systems, email clients, patch dates, and employee IDs. This helped me understand 
+            how device data is structured in the database.
+        </p>
+        <figure>
+            <img src="Screenshot 2026-05-25 090439.png" 
+                 alt="SQL query returning all columns from machines table" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Retrieving full device information from the <code>machines</code> table.</figcaption>
+        </figure>
+
+        <h2>Task 2 – Examine Login Attempts</h2>
+        <p>
+            I queried the <code>log_in_attempts</code> table to review login activity. This included 
+            usernames, timestamps, IP addresses, countries, and whether the login attempt was successful. 
+            This type of query is useful for monitoring authentication behavior and identifying suspicious 
+            activity.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 090658.png" 
+                 alt="SQL query showing login attempts sorted by date and time" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Sorting login attempts by date and time for easier analysis.</figcaption>
+        </figure>
+
+        <h2>Task 3 – Sort Data Returned from a Query</h2>
+        <p>
+            I used the <code>ORDER BY</code> clause to sort query results. Sorting helps reveal patterns, 
+            such as login sequences or device usage trends. I also practiced selecting specific columns 
+            to return only the data needed for analysis.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 090534.png" 
+                 alt="SQL query returning device_id and email_client columns" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Returning selected columns from the <code>machines</code> table.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab strengthened my understanding of SQL fundamentals, including selecting data, 
+            sorting results, and retrieving specific fields. These skills are essential for analyzing 
+            organizational data, supporting investigations, and working with relational databases in 
+            cybersecurity environments.
+        </p>
+    </section>
+
+</body>
+</html>

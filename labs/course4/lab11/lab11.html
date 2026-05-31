@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 4: Lab 11 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../../../about.html">About</a></li>
+                <li><a href="../../../../projects.html" class="active-link">Projects</a></li>
+                <li><a href="../../../../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 11 – Filter a SQL Query</h1>
+        <p>Course 4 - Tools of Trade: Linux and SQL</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced applying filters to SQL queries to retrieve specific information 
+            from a database. I used the MariaDB shell to filter employee records, machine data, 
+            and department information. These filtering skills are essential for analyzing 
+            organizational data and answering targeted questions using SQL.
+        </p>
+
+        <h2>Task 1 – Return Information on Machines and Their Operating Systems</h2>
+        <p>
+            I queried the <code>machines</code> table to return device information and operating systems. 
+            This helped me understand how machine data is stored and how to retrieve specific 
+            fields from a table.
+        </p>
+
+        <h2>Task 2 – Filter for Machines with a Specific Operating System</h2>
+        <p>
+            I used the <code>WHERE</code> clause to filter machines by operating system. This allowed me 
+            to narrow down the dataset to only the machines running a particular OS.
+        </p>
+
+        <h2>Task 3 – Filter for Employees in Specific Departments</h2>
+        <p>
+            I filtered the <code>employees</code> table to return only employees in certain departments, 
+            such as Sales and Finance. This demonstrated how SQL can isolate specific groups 
+            of employees based on department data.
+        </p>
+        
+        <figure>
+            <img src="Screenshot 2026-05-25 092858.png" 
+                 alt="SQL query returning employees in the Sales department" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering employees by department using <code>WHERE department = 'Sales'</code>.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 092830.png" 
+                 alt="SQL query returning employees in the Finance department" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Correcting a query and filtering employees in the Finance department.</figcaption>
+        </figure>
+
+        <h2>Task 4 – Filter for Employees Who Use Specific Machines</h2>
+        <p>
+            I filtered employees by office location using pattern matching with the 
+            <code>LIKE</code> operator. This allowed me to return all employees whose office names 
+            began with “South”.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-25 092932.png" 
+                 alt="SQL query returning employees in offices starting with 'South'" 
+                 style="width:100%; max-width:900px;">
+            <figcaption>Using <code>LIKE 'south%'</code> to filter employees by office location.</figcaption>
+        </figure>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab strengthened my understanding of SQL filtering techniques, including 
+            equality filters, pattern matching, and correcting syntax errors. These skills are 
+            essential for retrieving meaningful insights from relational databases and 
+            supporting data-driven decision-making in cybersecurity and IT environments.
+        </p>
+    </section>
+
+</body>
+</html>
