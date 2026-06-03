@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 6 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 6 – Improving authentication, authorization, and accounting for a small business</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I analyzed an access control incident involving unauthorized use of an 
+            administrative account. The goal was to review the event log, identify authentication and 
+            authorization issues, and recommend improvements to strengthen access controls. This 
+            exercise demonstrates how proper authentication, authorization, and accounting (AAA) 
+            practices help prevent misuse of privileged accounts.
+        </p>
+        
+        <h2>Scenario</h2>
+        <p>
+            A suspicious deposit was made from the business to an unknown bank account. The finance 
+            manager confirmed they did not initiate the transaction. An access log revealed that a 
+            payroll event was created using the <strong>Legal\Administrator</strong> account, even though 
+            payroll actions should only be performed by finance personnel. My task was to review the 
+            event log and complete the access control worksheet to determine what went wrong.
+        </p>
+        
+        <h2>Event Log Review</h2>
+        <p>
+            I examined the event log to gather key details about the incident, including who performed 
+            the action, when it occurred, and what system was used. These details help identify the 
+            source of unauthorized activity and determine whether proper access controls were in place.
+        </p>
+        
+        <embed src="Accounting exercise - Event log.pdf"
+               type="application/pdf" width="100%" height="350px" />
+        
+        <h2>Access Control Analysis</h2>
+        <p>
+            Using the worksheet, I documented the issues and analyzed the organization’s current 
+            authentication and authorization practices. Key findings include:
+        </p>
+        
+        <ul>
+            <li><strong>Who caused the incident?</strong>  
+                The payroll event was created using the <strong>Legal\Administrator</strong> account.</li>
+            
+            <li><strong>When and where did it occur?</strong>  
+                The event occurred on <strong>10/03/2023 at 8:29:57 AM</strong> from computer 
+                <strong>Up2-NoGud</strong> with IP <strong>152.207.255.255</strong>.</li>
+            
+            <li><strong>What system was used?</strong>  
+                The event source was <strong>AdsmEmployeeService</strong>, which handles payroll functions.</li>
+        </ul>
+        
+        <h2>Identified Issues</h2>
+        <p>
+            Based on the event details, I identified several authorization and authentication issues:
+        </p>
+        
+        <ul>
+            <li>The Legal department’s Administrator account was used to perform payroll actions, 
+                violating the principles of <strong>least privilege</strong> and <strong>separation of duties</strong>.</li>
+            
+            <li>The Administrator account may be shared or improperly managed, increasing the risk of 
+                unauthorized access.</li>
+            
+            <li>The account may still be active even though it should not have access to payroll systems.</li>
+        </ul>
+        
+        <h2>Recommendations</h2>
+        <p>
+            To prevent similar incidents, I recommended the following improvements:
+        </p>
+        
+        <ul>
+            <li>Implement <strong>role-based access control (RBAC)</strong> so only finance personnel can access 
+                payroll systems.</li>
+            
+            <li>Remove or restrict administrative privileges from non-finance users.</li>
+            
+            <li>Require <strong>multi-factor authentication (MFA)</strong> for all administrator-level accounts.</li>
+            
+            <li>Disable shared accounts and require unique credentials for every user.</li>
+            
+            <li>Conduct regular access reviews to ensure inactive or cross-department accounts are 
+                deactivated.</li>
+        </ul>
+        
+        <h2>Worksheet Evidence</h2>
+        <embed src="Access control worksheet.pdf"
+               type="application/pdf" width="100%" height="600px" />
+        
+        <h2>Reflection</h2>
+        <p>
+            This activity reinforced the importance of strong authentication and authorization controls. 
+            Misuse of privileged accounts can lead to financial loss, fraud, and operational disruption. 
+            By enforcing least privilege, auditing access regularly, and eliminating shared accounts, 
+            organizations can significantly reduce the risk of unauthorized activity and improve their 
+            overall security posture.
+        </p>
+    </section>
+</body>
+</html>

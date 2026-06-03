@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 4 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 4 – Decrypt an encrypted message</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced decrypting an encrypted message by using Linux commands, 
+            classical cipher techniques, and modern cryptographic tools. The activity required 
+            navigating directories, reading files, decoding a Caesar cipher, and using OpenSSL 
+            to decrypt an AES‑256‑CBC encrypted file. This process demonstrates how encryption 
+            and decryption support data security in real-world environments.
+        </p>
+
+        <h2>Task 1 – List the Contents of a Directory</h2>
+        <p>
+            I began by listing the contents of the <code>/home/analyst</code> directory. This revealed 
+            several important files, including:
+        </p>
+        <ul>
+            <li><code>Q1.encrypted</code> – the encrypted file that needed to be restored</li>
+            <li><code>README.txt</code> – a clue explaining that all data had been encrypted</li>
+            <li><code>caesar/</code> – a folder containing a hidden cipher file</li>
+        </ul>
+
+        <h2>Task 2 – Read the Contents of Files</h2>
+        <p>
+            I used <code>cat</code> to read the <code>README.txt</code> file, which explained that the 
+            encryption key could be recovered by solving a classical cipher. Inside the 
+            <code>caesar</code> directory, I found a hidden file named <code>.leftShift3</code> containing 
+            text encoded with a Caesar cipher.
+        </p>
+
+        <h2>Task 3 – Decode a Classical Cipher</h2>
+        <p>
+            The hidden file used a Caesar cipher with a left shift of 3. I used the 
+            <code>tr</code> command to revert the ciphertext back to plaintext. The decoded message 
+            revealed the password needed to decrypt the main encrypted file.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-26 150214.png"
+                 alt="Linux terminal showing Caesar cipher decoding and AES decryption"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Decoding the Caesar cipher and retrieving the decryption password.</figcaption>
+        </figure>
+
+        <h2>Task 4 – Decrypt the Encrypted File</h2>
+        <p>
+            Using the recovered password, I executed the following OpenSSL command to decrypt 
+            the file:
+        </p>
+
+        <p style="margin-left: 20px; font-family: monospace; background: black; padding: 10px;">
+            openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrate
+        </p>
+
+        <p>
+            This successfully restored the original file, <code>Q1.recovered</code>, which contained a 
+            confirmation message indicating that the decryption process was completed correctly.
+        </p>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab demonstrated how classical and modern cryptography can work together in 
+            layered security challenges. I reinforced my skills in Linux navigation, file analysis, 
+            cipher decoding, and AES decryption. Understanding how to recover encrypted data is 
+            essential for cybersecurity analysts who may need to investigate incidents, restore 
+            corrupted files, or validate encryption processes.
+        </p>
+    </section>
+</body>
+</html>

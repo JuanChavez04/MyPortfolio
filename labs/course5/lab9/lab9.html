@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 8 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 8 – Identify the attack vectors on USB drive</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I performed a threat model using the <strong>PASTA (Process for Attack Simulation 
+            and Threat Analysis)</strong> framework. The goal was to determine whether a new sneaker shopping 
+            app is safe to launch by identifying business requirements, technical risks, vulnerabilities, 
+            and appropriate security controls. This structured approach helps organizations understand 
+            how attackers might target an application and what protections are needed before release.
+        </p>
+        
+        <h2>Scenario</h2>
+        <p>
+            I am part of the security team for a sneaker company preparing to launch a mobile app that 
+            allows customers to buy and sell shoes. Using the PASTA framework, I evaluated the app 
+            across all seven stages to identify risks and define security requirements that protect user 
+            data, transactions, and backend systems.
+        </p>
+        
+        <h2>Stage I – Define Business and Security Objectives</h2>
+        <p>
+            The app must support secure and seamless transactions between buyers and sellers. It must 
+            protect user account data and payment information in compliance with industry privacy 
+            standards. Additionally, the app must maintain reliability and uptime to support real-time 
+            sneaker listings and purchases.
+        </p>
+        
+        <h2>Stage II – Define the Technical Scope</h2>
+        <p>
+            The application uses several technologies, including APIs, PKI, SHA‑256, and SQL. I prioritized 
+            SQL because it directly handles sensitive user and transaction data stored in the database. 
+            SQL queries are critical for retrieving listings and processing purchases, making them a 
+            high‑risk area for injection attacks. Securing SQL operations ensures data integrity and 
+            prevents unauthorized access.
+        </p>
+        
+        <h2>Stage III – Decompose the Application</h2>
+        <p>
+            The data flow begins when a user searches for sneakers. The app sends a query to the 
+            database, retrieves matching listings, and displays them to the user. This flow highlights 
+            exposure points where user input interacts with backend systems, creating opportunities for 
+            injection or data manipulation attacks.
+        </p>
+        
+        <embed src="PASTA data flow diagram.pdf"
+               type="application/pdf" width="100%" height="350px" />
+        
+        <h2>Stage IV – Threat Analysis</h2>
+        <p>
+            Internal threats include SQL injection through poorly validated input fields and misconfigured 
+            API endpoints that expose internal data. External threats include session hijacking caused by 
+            insecure cookies or weak encryption, as well as credential‑stuffing attacks that exploit weak 
+            passwords.
+        </p>
+        
+        <h2>Stage V – Vulnerability Analysis</h2>
+        <p>
+            Two major vulnerabilities were identified:
+        </p>
+        <ul>
+            <li>Lack of input validation and missing parameterized SQL queries, which increases the risk 
+                of SQL injection.</li>
+            <li>Weak session management that allows attackers to reuse stolen tokens.</li>
+        </ul>
+        
+        <h2>Stage VI – Attack Modeling</h2>
+        <p>
+            The attacker’s primary goal is to compromise user data. Possible attack paths include:
+        </p>
+        <ul>
+            <li>Exploiting SQL injection to extract database records</li>
+            <li>Hijacking user sessions through insecure tokens</li>
+            <li>Using weak credentials to gain unauthorized access</li>
+        </ul>
+        
+        <embed src="PASTA attack tree.pdf"
+               type="application/pdf" width="100%" height="350px" />
+        
+        <h2>Stage VII – Risk Analysis and Impact</h2>
+        <p>
+            To reduce risk, I identified four key security controls:
+        </p>
+        <ul>
+            <li>Implement parameterized queries and strict input validation to prevent SQL injection</li>
+            <li>Enforce multi‑factor authentication (MFA) for all user accounts</li>
+            <li>Use secure session management with HTTPS and short‑lived tokens</li>
+            <li>Apply continuous monitoring and logging to detect suspicious activity</li>
+        </ul>
+        
+        <h2>Worksheet Evidence</h2>
+        <embed src="PASTA worksheet.pdf"
+               type="application/pdf" width="100%" height="600px" />
+        
+        <h2>Reflection</h2>
+        <p>
+            This activity demonstrated how the PASTA framework provides a structured, attacker‑focused 
+            approach to identifying risks in new applications. By analyzing business objectives, technical 
+            components, threats, vulnerabilities, and attack paths, I was able to recommend targeted 
+            controls that strengthen the app’s security posture before launch.
+        </p>
+
+    </section>
+</body>
+</html>

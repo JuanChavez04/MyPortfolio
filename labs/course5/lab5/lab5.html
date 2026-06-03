@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 5 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 5 – Create hash values</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this lab, I practiced generating and comparing SHA‑256 hash values to verify file 
+            integrity. Hashing is a core cybersecurity skill used to detect tampering, confirm 
+            authenticity, and ensure that files have not been altered. By comparing two files and 
+            their hash outputs, I determined whether the files were identical or different.
+        </p>
+
+        <h2>Task 1 – List the Contents of the Home Directory</h2>
+        <p>
+            I began by listing the contents of the home directory. Two files were present:
+        </p>
+        <ul>
+            <li><code>file1.txt</code></li>
+            <li><code>file2.txt</code></li>
+        </ul>
+        <p>
+            These files were used to compare plaintext content and hash values.
+        </p>
+
+        <h2>Task 2 – Compare the Plaintext of Both Files</h2>
+        <p>
+            I used the <code>cat</code> command to display the contents of each file. Both files contained 
+            the EICAR antivirus test string, but <code>file2.txt</code> included additional characters at 
+            the end. Even small differences in plaintext should produce completely different hash 
+            values.
+        </p>
+
+        <h2>Task 3 – Compute SHA‑256 Hashes</h2>
+        <p>
+            I generated SHA‑256 hashes for both files using the <code>sha256sum</code> command. The 
+            resulting hashes were redirected into separate files:
+        </p>
+        <ul>
+            <li><code>file1hash</code></li>
+            <li><code>file2hash</code></li>
+        </ul>
+        <p>
+            Each hash file contained the computed hash followed by the filename.
+        </p>
+
+        <figure>
+            <img src="Screenshot 2026-05-26 151552.png"
+                 alt="Linux terminal showing SHA-256 hashing and hash comparison"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Computing SHA‑256 hashes and comparing the results.</figcaption>
+        </figure>
+
+        <h2>Task 4 – Compare the Hash Values</h2>
+        <p>
+            I used the <code>cmp</code> command to compare the two hash files. The output indicated a 
+            difference at the first character of the first line, confirming that the hash values did 
+            not match. Because cryptographic hashes are extremely sensitive to input changes, 
+            even a single altered character results in a completely different hash.
+        </p>
+
+        <h2>Reflection</h2>
+        <p>
+            This lab demonstrated how hashing can be used to verify file integrity and detect 
+            tampering. Even though the two files appeared similar, their hash values revealed 
+            that they were not identical. Understanding how to generate and compare hashes is 
+            essential for malware analysis, digital forensics, and secure file verification.
+        </p>
+    </section>
+</body>
+</html>

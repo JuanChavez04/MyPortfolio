@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 8 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 8 – Identify the attack vectors on USB drive</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I analyzed the security risks associated with finding an unknown USB drive 
+            in a parking lot. USB baiting is a common attack technique where a threat actor leaves a 
+            malicious USB device in a public area, hoping someone will plug it into a work computer. 
+            I reviewed the contents of the USB, evaluated the risks from both an attacker and target 
+            perspective, and identified controls that could mitigate similar incidents.
+        </p>
+        
+        <h2>Scenario</h2>
+        <p>
+            A USB stick with the hospital’s logo was found in the parking lot. Because unknown USB 
+            devices can contain malware, the security team used virtualization software to safely 
+            examine the drive. Virtual machines isolate the USB from the rest of the network, allowing 
+            analysts to inspect files without risking infection of hospital systems.
+        </p>
+        
+        <h2>Contents</h2>
+        <p>
+            The USB drive contained a mix of personal and work-related files, including family photos, 
+            HR documents, a new‑hire letter, and employee schedules. These files may contain 
+            personally identifiable information (PII) and sensitive business data. Storing personal and 
+            work files together increases the risk of exposure if the device is lost, stolen, or accessed 
+            by unauthorized individuals.
+        </p>
+        
+        <h2>Attacker Mindset</h2>
+        <p>
+            An attacker could use the HR documents to impersonate employees or gain access to 
+            internal hospital systems. Personal photos could be leveraged for social‑engineering 
+            attacks targeting Jorge, his coworkers, or even his relatives. The combination of personal 
+            and professional data provides multiple opportunities for phishing, identity theft, or 
+            targeted attacks against the hospital.
+        </p>
+        
+        <h2>Risk Analysis</h2>
+        <p>
+            A malicious USB drive could contain malware designed to infect hospital computers as 
+            soon as it is plugged in. This could lead to ransomware, unauthorized access to patient 
+            records, or disruption of hospital operations. Sensitive information stored on the device 
+            could be used for identity theft or to craft convincing phishing attacks. Technical controls 
+            such as disabling autorun, enforcing endpoint protection, and scanning removable media 
+            can reduce these risks. Operational controls include employee training and policies that 
+            separate personal and work devices. Managerial controls such as encryption and access 
+            monitoring further reduce exposure.
+        </p>
+        
+        <h2>Worksheet Evidence</h2>
+        <embed src="Parking lot USB exercise.pdf"
+               type="application/pdf" width="100%" height="600px" />
+        
+        <h2>Reflection</h2>
+        <p>
+            This activity reinforced the importance of treating unknown USB devices as potential 
+            threats. Even when a device appears to belong to the organization, it may contain 
+            malware or sensitive information that should not be exposed. By using virtualization, 
+            enforcing strict removable‑media policies, and educating employees, organizations can 
+            significantly reduce the risk of USB‑based attacks.
+        </p>
+    </section>
+</body>
+</html>

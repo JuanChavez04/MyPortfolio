@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 7 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 7 – Analyze a Vulnerable System</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I conducted a vulnerability assessment for a small e‑commerce business 
+            using guidance from <strong>NIST SP 800‑30 Rev. 1</strong>. The goal was to evaluate risks 
+            affecting the company’s publicly accessible database server and outline a remediation 
+            strategy to reduce exposure. This assessment demonstrates how cybersecurity analysts 
+            identify threats, determine likelihood and severity, and recommend controls to protect 
+            critical systems.
+        </p>
+        
+        <h2>Scenario</h2>
+        <p>
+            The company stores customer and business data on a remote database server that has 
+            been publicly accessible since launch. Employees around the world regularly query the 
+            server to find potential customers. As a cybersecurity analyst, I recognized that leaving 
+            the database open to the public is a major vulnerability that increases the risk of data 
+            breaches, unauthorized access, and service disruption.
+        </p>
+        
+        <h2>System Description</h2>
+        <p>
+            The system consists of a high‑performance Linux server with 128GB of memory and a 
+            MySQL database. It communicates with other servers over IPv4 and uses SSL/TLS for 
+            encrypted connections. Because it stores customer orders, payment records, and 
+            inventory data, the server is essential to business operations and must remain secure 
+            and available.
+        </p>
+        
+        <h2>Scope</h2>
+        <p>
+            The vulnerability assessment covers a three‑month period from January to March 2026. 
+            The focus is on evaluating access controls and identifying risks associated with the 
+            database server. <strong>NIST SP 800‑30 Rev. 1</strong> was used as the framework for analyzing 
+            threats, vulnerabilities, likelihood, and severity.
+        </p>
+        
+        <h2>Purpose</h2>
+        <p>
+            The database server is critical to the business because it stores sensitive customer and 
+            operational data. Securing this server protects confidentiality, integrity, and availability. 
+            If the server were disabled or compromised, the business could lose access to essential 
+            information, interrupt sales, and suffer financial and reputational damage.
+        </p>
+        
+        <h2>Risk Assessment</h2>
+        <p>
+            I evaluated several realistic threat scenarios based on NIST SP 800‑30 guidance. Each 
+            threat was scored using likelihood and severity values to determine overall risk.
+        </p>
+        
+        <embed src="Vulnerability assessment report.pdf"
+               type="application/pdf" width="100%" height="600px" />
+        
+        <h2>Threat Sources and Events (NIST SP 800‑30)</h2>
+        <p>
+            NIST SP 800‑30 categorizes threat sources as human, technological, or environmental. 
+            For this assessment, the most relevant threat sources included:
+        </p>
+        
+        <ul>
+            <li><strong>Competitors</strong> attempting to exfiltrate sensitive information</li>
+            <li><strong>Cybercriminals</strong> launching ransomware attacks</li>
+            <li><strong>Insiders</strong> misusing administrative privileges</li>
+        </ul>
+        
+        <p>
+            Threat events included data exfiltration, ransomware encryption, and unauthorized 
+            modification of records. These events directly impact confidentiality, integrity, and 
+            availability of the database.
+        </p>
+        
+        <h2>Approach</h2>
+        <p>
+            I evaluated risks by considering the likelihood of each threat event and the severity of its 
+            impact on business operations. External attackers and insiders pose the highest risk 
+            because they can directly compromise sensitive data or disrupt operations. The chosen 
+            threats reflect common vulnerabilities in small business environments.
+        </p>
+        
+        <h2>Remediation Strategy</h2>
+        <p>
+            Based on the assessment, I recommended several improvements to strengthen the 
+            security of the database server:
+        </p>
+        
+        <ul>
+            <li>Implement <strong>multi‑factor authentication</strong> for all administrative accounts</li>
+            <li>Enforce <strong>least‑privilege access controls</strong> and role‑based permissions</li>
+            <li>Encrypt data in motion using <strong>TLS</strong> instead of SSL</li>
+            <li>Apply <strong>IP allow‑listing</strong> to restrict access to corporate locations</li>
+            <li>Conduct <strong>regular backups</strong> to mitigate ransomware impact</li>
+            <li>Use <strong>network segmentation</strong> and continuous monitoring to detect anomalies</li>
+            <li>Apply timely <strong>software updates</strong> and security patches</li>
+        </ul>
+        
+        <p>
+            These controls reduce exposure to external attacks, prevent unauthorized access, and 
+            improve the overall resilience of the system.
+        </p>
+        
+        <h2>Reference Framework</h2>
+        <p>
+            The assessment aligns with <strong>NIST SP 800‑30 Rev. 1</strong>, which provides structured 
+            guidance for identifying threat sources, evaluating likelihood and severity, and 
+            prioritizing remediation efforts.
+        </p>
+        
+        <embed src="NIST SP 800-30 Rev. 1.pdf"
+               type="application/pdf" width="100%" height="600px" />
+        
+        <h2>Reflection</h2>
+        <p>
+            This activity strengthened my understanding of vulnerability assessments and how to 
+            apply NIST risk assessment principles in real-world scenarios. By identifying threats, 
+            scoring risks, and recommending targeted controls, I demonstrated how cybersecurity 
+            analysts help organizations reduce vulnerabilities and protect critical systems.
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 5: Lab 2 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 2 – Score risks based on their likelihood and severity</h1>
+        <p>Course 5 - Assets, Threats, and Vulnerabilities</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I practiced evaluating risks by scoring their likelihood and severity. 
+            This process is a key part of risk assessment and helps organizations prioritize which 
+            vulnerabilities require immediate attention. By reviewing the bank’s operational 
+            environment and analyzing each risk, I calculated priority scores that indicate how 
+            urgently each issue should be addressed.
+        </p>
+
+        <h2>Scenario</h2>
+        <p>
+            The scenario describes a commercial bank located in a coastal area with low crime rates. 
+            The bank has 100 on‑premises employees, 20 remote employees, and serves over 2,000 
+            individual and 200 commercial customers. Because the bank handles sensitive financial 
+            data and must comply with strict regulations, it is essential to identify and prioritize 
+            risks that could impact operations, customer information, or financial stability.
+        </p>
+
+        <h2>Risk Register Review</h2>
+        <p>
+            I analyzed the provided risk register, which lists several risks affecting the bank’s 
+            primary asset: its funds. Each risk includes a description, likelihood score, severity 
+            score, and calculated priority. The priority score is determined using the formula:
+        </p>
+
+        <p style="font-style: italic; margin-left: 20px;">
+            <strong>Priority = Likelihood × Severity</strong>
+        </p>
+
+        <p>
+            This scoring method helps determine which risks pose the greatest threat and should be 
+            addressed first.
+        </p>
+
+        <embed src="Risk register.pdf"
+               type="application/pdf" width="100%" height="600px" />
+
+        <h2>Analysis</h2>
+        <p>
+            After reviewing the risk register, I identified several important insights:
+        </p>
+        <ul>
+            <li><strong>Business email compromise</strong> has the highest priority score (9), making it 
+                the most urgent risk. Human error and phishing attempts significantly increase the 
+                likelihood of this threat.</li>
+            
+            <li><strong>Compromised user database</strong> and <strong>financial records leak</strong> 
+                both have moderate priority scores (6). These risks involve poor encryption and 
+                publicly accessible backup servers, which could expose sensitive customer data.</li>
+            
+            <li><strong>Theft</strong> and <strong>supply chain disruption</strong> have lower priority 
+                scores (2), but still represent operational risks that should be monitored.</li>
+        </ul>
+
+        <p>
+            The notes section explains why these risks are possible in the bank’s environment. 
+            With many employees handling sensitive data and external partners involved in 
+            operations, the bank is exposed to human error, phishing, and supply chain issues. 
+            Its coastal location also increases the likelihood of natural disruptions.
+        </p>
+
+        <h2>Reflection</h2>
+        <p>
+            This activity reinforced how important it is to evaluate risks using a structured scoring 
+            system. By assigning likelihood and severity values, organizations can make informed 
+            decisions about where to allocate resources. High‑priority risks such as business email 
+            compromise require immediate mitigation, while lower‑priority risks can be addressed 
+            through long‑term planning. Understanding how to score and prioritize risks is essential 
+            for building effective security strategies.
+        </p>
+    </section>
+</body>
+</html>
