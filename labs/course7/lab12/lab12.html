@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 7: Lab 12 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/MyPortfolio/index.html">Home</a></li>
+                <li><a href="/MyPortfolio/about.html">About</a></li>
+                <li><a href="/MyPortfolio/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/MyPortfolio/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 12 – Update a file Through a Python Algorithm</h1>
+        <p>Course 7 - Automate Cybersecurity Tasks with Python</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Project Summary</h2>
+        <p>
+            In this project, I developed a Python algorithm that automatically updates an allow list by 
+            removing IP addresses that are no longer authorized. This simulates a real-world cybersecurity 
+            workflow where access control lists must be maintained accurately and efficiently through automation.
+            The algorithm reads the file, parses its contents, removes unauthorized entries, and rewrites the 
+            updated list back to the file.
+        </p>
+
+        <h2>How the Algorithm Works</h2>
+
+        <h3>1. Open the allow list file</h3>
+        <p>
+            I assigned the file name to a variable and used a <code>with open(..., "r")</code> block to safely 
+            read the file contents into Python.
+        </p>
+
+        <h3>2. Read and parse the file</h3>
+        <p>
+            Using <code>.read()</code>, I imported the entire file as a string. Then I used 
+            <code>.split()</code> to convert the string into a list of individual IP addresses, making it 
+            possible to remove specific entries.
+        </p>
+
+        <h3>3. Remove unauthorized IP addresses</h3>
+        <p>
+            I iterated through the list and checked each IP against a <code>remove_list</code>. 
+            If an IP appeared in the remove list, it was removed from the allow list. This step demonstrates 
+            how loops and conditionals automate access control decisions.
+        </p>
+
+        <h3>4. Rewrite the updated allow list</h3>
+        <p>
+            After cleaning the list, I joined the IPs back into a single string and used 
+            <code>with open(..., "w")</code> to overwrite the file with the updated, authorized IP addresses.
+        </p>
+
+        <h2>Skills Demonstrated</h2>
+        <ul>
+            <li>File handling with <code>open()</code>, including read and write modes</li>
+            <li>Parsing and manipulating text data using <code>.read()</code>, <code>.split()</code>, and <code>.join()</code></li>
+            <li>List operations such as iteration and <code>.remove()</code></li>
+            <li>Conditional logic for access control automation</li>
+            <li>Building end-to-end algorithms for cybersecurity workflows</li>
+        </ul>
+
+        <h2>Supporting Document</h2>
+        <figure style="text-align:center; margin-top:20px;">
+            <embed src="Algorithm for file updates in Python.pdf" type="application/pdf" width="100%" height="600px" />
+            <figcaption>Full project write-up: Algorithm for updating allow lists in Python.</figcaption>
+        </figure>
+    </section>
+</body>
+</html>

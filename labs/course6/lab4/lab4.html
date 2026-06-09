@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 6: Lab 4 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/MyPortfolio/index.html">Home</a></li>
+                <li><a href="/MyPortfolio/about.html">About</a></li>
+                <li><a href="/MyPortfolio/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/MyPortfolio/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 4 – Investigate a Suspicious File Hash</h1>
+        <p>Course 6 - Sound the Alarm: Detection and Response</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview/Scenario</h2>
+        <figure style="text-align:center; margin-top:20px;">
+            <img src="Screenshot 2026-05-29 124438.png" alt="VirusTotal activity overview and scenario"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Scenario and activity overview for the malware investigation.</figcaption>
+        </figure>
+
+        <h2>Has this file been identified as malicious?</h2>
+        <p>
+            Yes. VirusTotal identifies the file as malicious, with <strong>54 out of 71 security vendors</strong> 
+            flagging it as harmful. The file also has a <strong>community score of -296</strong>, indicating strong 
+            consensus that it is unsafe. Multiple vendors classify it as a <strong>FlagPro backdoor trojan</strong>, 
+            and behavioral indicators such as <em>service scanning</em>, <em>runtime modules</em>, and 
+            <em>spreader behavior</em> further confirm malicious activity.
+        </p>
+
+        <!-- VirusTotal Screenshot -->
+        <figure style="text-align:center; margin-top:20px;">
+            <img src="Screenshot 2026-05-29 083740.png" alt="VirusTotal detection results"
+                 style="width:100%; max-width:900px;">
+            <figcaption>VirusTotal detection results showing 54/71 vendors marking the file as malicious.</figcaption>
+        </figure>
+
+        <h2>Indicators of Compromise (IoCs) Mapped to the Pyramid of Pain</h2>
+        <p>
+            The following table summarizes the IoCs associated with this malware sample and maps them 
+            to their corresponding categories in the Pyramid of Pain. These indicators help analysts 
+            understand how the malware behaves and what evidence it leaves behind.
+        </p>
+
+        <figure style="text-align:center; margin-top:20px;">
+            <embed src="Pyramid of Pain.pdf" type="application/pdf" width="100%" height="600px" />
+            <figcaption>Pyramid of Pain IoC breakdown for the FlagPro malware sample.</figcaption>
+        </figure>
+    </section>
+</body>
+</html>

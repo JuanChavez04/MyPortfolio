@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 6: Lab 5 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/MyPortfolio/index.html">Home</a></li>
+                <li><a href="/MyPortfolio/about.html">About</a></li>
+                <li><a href="/MyPortfolio/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/MyPortfolio/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 5 – Use a Playbook to Respond to a Phishing Incident</h1>
+        <p>Course 6 - Sound the Alarm: Detection and Response</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I responded to a phishing incident involving a known malicious file hash. I used a 
+            phishing incident response playbook to guide my actions, followed the documented steps to evaluate 
+            the alert, and updated the alert ticket with my findings. This demonstrates how I apply structured 
+            procedures to handle phishing alerts in a SOC environment.
+        </p>
+        
+        <h2>Scenario</h2>
+        <p>
+            As a level-one SOC analyst at a financial services company, I received an alert about a possible 
+            phishing attempt. The alert indicated that an employee had received an email with a password‑protected 
+            attachment and may have opened it. The attachment, <code>bfsvc.exe</code>, was associated with a 
+            SHA256 hash that had already been verified as malicious in a previous investigation.
+        </p>
+        <p>
+            My task was to follow the organization’s phishing incident response playbook, complete the 
+            investigation, and update the alert ticket with a clear summary of the incident, including whether 
+            the attachment was malicious and what actions should be taken next.
+        </p>
+        
+        <h2>Phishing Incident Response Playbook</h2>
+        <p>
+            The phishing playbook provides a step-by-step process for handling phishing alerts. It ensures that 
+            level-one analysts respond consistently and escalate incidents appropriately when malicious activity 
+            is confirmed. The main steps in the playbook are:
+        </p>
+        <ul>
+            <li><strong>Step 1:</strong> Receive phishing alert</li>
+            <li><strong>Step 2:</strong> Evaluate the alert (severity, sender/receiver details, subject, body, links, attachments)</li>
+            <li><strong>Step 3.0–3.2:</strong> Determine if links/attachments exist, assess if they are malicious, and escalate if needed</li>
+            <li><strong>Step 4:</strong> Close the alert ticket if no malicious content is found</li>
+        </ul>
+        
+        <figure style="text-align:center; margin-top:20px;">
+            <embed src="Phishing incident response playbook.pdf" type="application/pdf" width="100%" height="600px" />
+            <figcaption>Phishing incident response playbook and flowchart (Version 1.0).</figcaption>
+        </figure>
+        
+        <h2>Applying the Playbook to the Alert</h2>
+        
+        <h3>Step 1: Receive phishing alert</h3>
+        <p>
+            I began with the alert ticket indicating a possible phishing attempt:
+        </p>
+        <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+                <th style="border:1px solid #ccc; padding:8px;">Ticket ID</th>
+                <th style="border:1px solid #ccc; padding:8px;">Alert Message</th>
+                <th style="border:1px solid #ccc; padding:8px;">Severity</th>
+                <th style="border:1px solid #ccc; padding:8px;">Status</th>
+            </tr>
+            <tr>
+                <td style="border:1px solid #ccc; padding:8px;">A-2703</td>
+                <td style="border:1px solid #ccc; padding:8px;">SERVER-MAIL Phishing attempt possible download of malware</td>
+                <td style="border:1px solid #ccc; padding:8px;">Medium</td>
+                <td style="border:1px solid #ccc; padding:8px;">Open</td>
+            </tr>
+        </table>
+        
+        <h3>Step 2: Evaluate the alert</h3>
+        <p>
+            I reviewed the alert details, including sender and receiver information, the subject line, and the 
+            message body. The email claimed to be a job application and instructed the recipient to open a 
+            password‑protected attachment using the provided password. This is a common phishing tactic used to 
+            bypass basic security controls and convince users to execute malicious files.
+        </p>
+        <p>
+            The attachment was identified as <code>bfsvc.exe</code>, and the associated SHA256 hash 
+            <code>54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b</code> was already known to be 
+            malicious from a previous VirusTotal analysis.
+        </p>
+        
+        <h3>Step 3: Confirm malicious content and escalate</h3>
+        <p>
+            Following the playbook, I confirmed that the email contained an attachment and that the attachment 
+            was malicious. VirusTotal reported that the file hash was detected by 54 out of 71 vendors and 
+            associated with the FlagPro backdoor malware, exhibiting anti‑debugging and lateral movement 
+            behaviors. Based on this, the playbook required escalation.
+        </p>
+        <p>
+            I updated the ticket comments to summarize the findings and changed the ticket status to 
+            <strong>Escalated</strong> so that a level-two SOC analyst could continue with containment and 
+            remediation actions.
+        </p>
+        
+        <h3>Step 4: Documenting the ticket</h3>
+        <p>
+            I documented the known malicious hash, the email details (sender, recipient, subject, and attachment), 
+            and the reason for escalation. Clear documentation ensures that higher-level analysts have all the 
+            necessary context to respond quickly and effectively.
+        </p>
+        
+        <figure style="text-align:center; margin-top:20px;">
+            <embed src="Alert ticket.pdf" type="application/pdf" width="100%" height="600px" />
+            <figcaption>Completed phishing alert ticket with investigation notes and escalation.</figcaption>
+        </figure>
+        
+        <h2>Reflection</h2>
+        <p>
+            This activity reinforced how incident response playbooks help standardize phishing investigations and 
+            reduce response time. By following the documented steps, I was able to evaluate the alert, confirm the 
+            malicious attachment using threat intelligence, and properly escalate the incident with clear, 
+            well‑structured documentation.
+        </p>
+
+    </section>
+</body>
+</html>

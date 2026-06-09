@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 7: Lab 9 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/MyPortfolio/index.html">Home</a></li>
+                <li><a href="/MyPortfolio/about.html">About</a></li>
+                <li><a href="/MyPortfolio/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/MyPortfolio/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 9 – Use Regular Expressions to Find Patterns</h1>
+        <p>Course 7 - Automate Cybersecurity Tasks with Python</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Lab Summary</h2>
+        <p>
+            In this lab, I used regular expressions in Python to extract meaningful security data from logs, 
+            including device IDs that match specific patterns and valid IP addresses. I practiced building 
+            regex patterns with symbols like <code>\w</code>, <code>\d</code>, <code>+</code>, and <code>{ }</code> to control 
+            the precision of matches, and applied <code>re.findall()</code> to filter valid IPs from noisy log data. 
+            I then compared extracted IP addresses against a flagged list to automatically identify those 
+            requiring further investigation. This lab reinforced how regex can automate pattern detection 
+            in cybersecurity workflows.
+        </p>
+        
+        <h2>Skills Demonstrated</h2>
+        <ul>
+            <li>Using Python’s <code>re</code> module for pattern matching</li>
+            <li>Building regex patterns with <code>\w</code>, <code>\d</code>, <code>+</code>, and <code>{ }</code></li>
+            <li>Extracting device IDs and IP addresses from log data</li>
+            <li>Validating IP address formats with quantifiers</li>
+            <li>Looping through extracted data to flag suspicious activity</li>
+            <li>Automating log analysis with regex and conditionals</li>
+        </ul>
+        
+        <h2>Supporting Document</h2>
+        <figure style="text-align:center; margin-top:20px;">
+            <embed src="Activity_Use regular expressions to find patterns.pdf" type="application/pdf" width="100%" height="600px" />
+            <figcaption>Full lab notebook: Using regular expressions to extract patterns from security logs.</figcaption>
+        </figure>
+
+    </section>
+</body>
+</html>

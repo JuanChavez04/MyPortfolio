@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 6: Lab 6 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/MyPortfolio/index.html">Home</a></li>
+                <li><a href="/MyPortfolio/about.html">About</a></li>
+                <li><a href="/MyPortfolio/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/MyPortfolio/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 6 – Explore Signatures and Logs with Suricata</h1>
+        <p>Course 6 - Sound the Alarm: Detection and Response</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+<p>
+    In this activity, I worked with Suricata, an open-source intrusion detection and network 
+    monitoring tool. I explored how Suricata processes network traffic, applies custom rules, 
+    and generates alerts in both <code>fast.log</code> and <code>eve.json</code>. This lab demonstrates my 
+    ability to write IDS rules, analyze alert logs, and interpret HTTP traffic captured from a 
+    packet capture file.
+</p>
+
+<h2>Scenario</h2>
+<p>
+    As a security analyst, my task was to monitor network traffic using Suricata and trigger 
+    alerts based on a custom rule. I examined a packet capture file (<code>sample.pcap</code>) and 
+    analyzed Suricata’s output logs to understand how alerts are generated and what information 
+    they contain. This scenario reflects real-world IDS workflows where analysts must validate 
+    alerts, inspect logs, and confirm whether traffic matches expected patterns.
+</p>
+
+<h2>Custom Suricata Rule</h2>
+<p>
+    I began by reviewing the custom rule provided in <code>custom.rules</code>. This rule triggers an 
+    alert whenever Suricata detects an HTTP GET request flowing from the internal network to an 
+    external destination. The rule is shown below:
+</p>
+
+<pre style="background:#f4f4f4; padding:12px; border-radius:6px;">
+alert http $HOME_NET any -> $EXTERNAL_NET any 
+(msg:"GET on wire"; flow:established,to_server; 
+content:"GET"; http_method; sid:12345; rev:3;)
+</pre>
+
+<figure style="text-align:center; margin-top:20px;">
+    <img src="Screenshot 2026-05-29 142145.png" alt="Custom Suricata rule, Suricata run, and fast.log output"
+         style="width:100%; max-width:900px;">
+    <figcaption>Custom rule, Suricata processing the packet capture, and initial fast.log alerts.</figcaption>
+</figure>
+
+<h2>Analyzing fast.log Output</h2>
+<p>
+    The <code>fast.log</code> file contains a simplified alert summary. Each alert includes the timestamp, 
+    rule signature, priority, protocol, and source/destination IP addresses. The alerts confirm 
+    that Suricata detected multiple HTTP GET requests from the internal host to Google servers.
+</p>
+
+<h2>Analyzing eve.json Output</h2>
+<p>
+    The <code>eve.json</code> file provides detailed JSON-formatted alert data. This includes HTTP 
+    metadata such as hostname, URL, user agent, HTTP status code, and redirect information. 
+    These details help analysts understand the full context of the network activity.
+</p>
+
+<figure style="text-align:center; margin-top:20px;">
+    <img src="Screenshot 2026-05-29 142221.png" alt="Suricata eve.json output"
+         style="width:100%; max-width:900px;">
+    <figcaption>eve.json showing detailed HTTP metadata for each alert.</figcaption>
+</figure>
+
+<h2>Using jq to Parse JSON Logs</h2>
+<p>
+    I used the <code>jq</code> tool to extract specific fields from <code>eve.json</code>, such as timestamps, 
+    flow IDs, signatures, protocols, and destination IPs. This is a common workflow for analysts 
+    who need to quickly filter and analyze large JSON logs. I also encountered a syntax error 
+    when attempting to filter by flow ID, which reinforced the importance of correct jq syntax.
+</p>
+
+<figure style="text-align:center; margin-top:20px;">
+    <img src="Screenshot 2026-05-29 143058.png" alt="Using jq to parse Suricata logs"
+         style="width:100%; max-width:900px;">
+    <figcaption>Extracting key fields from eve.json using jq and testing filter expressions.</figcaption>
+</figure>
+
+<h2>Reflection</h2>
+<p>
+    This lab strengthened my understanding of intrusion detection workflows. I practiced writing 
+    custom Suricata rules, running Suricata in offline mode, and analyzing both summary and 
+    detailed alert logs. I also used <code>jq</code> to parse JSON logs, which is an essential skill for 
+    working with modern security tools. This hands-on experience demonstrates my ability to 
+    interpret IDS alerts and understand how network traffic triggers detection rules.
+</p>
+
+    </section>
+</body>
+</html>

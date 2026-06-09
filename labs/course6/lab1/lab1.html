@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 6: Lab 1 | Juan Chavez</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="/MyPortfolio/index.html">Home</a></li>
+                <li><a href="/MyPortfolio/about.html">About</a></li>
+                <li><a href="/MyPortfolio/projects.html" class="active-link">Projects</a></li>
+                <li><a href="/MyPortfolio/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="lab-header">
+        <h1>Lab 1 – Analyze Your First Packet</h1>
+        <p>Course 6 - Sound the Alarm: Detection and Response</p>
+    </section>
+
+    <section class="lab-content">
+        <h2>Overview</h2>
+        <p>
+            In this activity, I analyzed network traffic using Wireshark to understand how data moves 
+            between systems during a web browsing session. Packet capture analysis is an essential 
+            skill for security analysts because it helps identify communication patterns, detect 
+            anomalies, and investigate suspicious activity. I used Wireshark to inspect packet details, 
+            apply filters, and examine specific protocols such as DNS, TCP, and HTTP.
+        </p>
+        
+        <h2>Scenario</h2>
+        <p>
+            As a security analyst, I investigated traffic related to a user connecting to a website. 
+            The packet capture file contained multiple protocols and communication flows. My task 
+            was to filter the data to identify source and destination IP addresses, examine protocol 
+            behavior, and analyze packet contents to understand what information was exchanged 
+            during the session.
+        </p>
+        
+        <h2>Identifying Source and Destination IP Addresses</h2>
+        <p>
+            I applied filters to isolate traffic between the user’s machine and the destination server. 
+            This allowed me to identify the IP addresses involved in the session and observe the 
+            sequence of packets exchanged during the connection process.
+        </p>
+        
+        <figure>
+            <img src="Screenshot 2026-05-28 124756.png" alt="Wireshark filtered by IP address"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering traffic by destination IP to observe communication patterns.</figcaption>
+        </figure>
+        
+        <h2>Examining Protocol Layers</h2>
+        <p>
+            I inspected individual packets to review Ethernet, IP, and TCP headers. This helped me 
+            understand how the connection was established, including SYN, SYN-ACK, and ACK 
+            packets. Examining protocol layers also revealed port numbers, flags, and sequence 
+            values used during the session.
+        </p>
+        
+        <h2>Filtering DNS Traffic</h2>
+        <p>
+            I applied a filter for UDP port 53 to isolate DNS queries and responses. This allowed me 
+            to identify the domain being resolved and the IP addresses returned by the DNS server. 
+            DNS analysis is important because attackers often manipulate DNS to redirect users or 
+            hide malicious activity.
+        </p>
+        
+        <figure>
+            <img src="Screenshot 2026-05-28 130327.png" alt="Wireshark DNS response details"
+                 style="width:100%; max-width:900px;">
+            <figcaption>DNS response showing multiple A records for the requested domain.</figcaption>
+        </figure>
+        
+        <h2>Filtering TCP Port 80 (HTTP Traffic)</h2>
+        <p>
+            I filtered for TCP port 80 to examine HTTP communication. This revealed packets 
+            associated with web requests and responses. Reviewing HTTP traffic helps analysts 
+            understand what data is being sent to and from a website, including headers and 
+            payloads.
+        </p>
+        
+        <figure>
+            <img src="Screenshot 2026-05-28 130653.png" alt="Wireshark HTTP traffic filtered by port 80"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering HTTP traffic to analyze web communication.</figcaption>
+        </figure>
+        
+        <h2>Searching for Specific Payload Text</h2>
+        <p>
+            I used the filter <code>tcp contains "curl"</code> to locate packets containing specific text in 
+            their payload. This technique is useful for identifying command-line activity, API calls, 
+            or suspicious strings within network traffic.
+        </p>
+        
+        <figure>
+            <img src="Screenshot 2026-05-28 130800.png" alt="Wireshark filter for curl payload"
+                 style="width:100%; max-width:900px;">
+            <figcaption>Filtering TCP packets containing the string “curl” in the payload.</figcaption>
+        </figure>
+        
+        <h2>Reflection</h2>
+        <p>
+            This activity strengthened my ability to analyze packet captures and apply targeted 
+            filters to isolate relevant traffic. Understanding how to inspect DNS, TCP, and HTTP 
+            packets is essential for detecting malicious behavior, troubleshooting network issues, 
+            and validating normal communication patterns. Wireshark provides deep visibility into 
+            network activity, making it a critical tool for cybersecurity investigations.
+        </p>
+
+    </section>
+</body>
+</html>
