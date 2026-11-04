@@ -451,3 +451,543 @@ section {
     border-radius: 6px;
     border: 1px solid #333;
 }
+
+
+/* =========================================
+   PERSONAL PROJECTS PAGE
+========================================= */
+
+.project-section {
+    width: calc(100% - 48px);
+    max-width: 1100px;
+    margin: 65px auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #c9d1d9;
+    line-height: 1.8;
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 450px), 1fr)
+    );
+    gap: 25px;
+}
+
+/* PROJECT CARDS */
+
+.project-section .project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.project-section .project-card:hover {
+    transform: translateY(-4px);
+    border-color: #58a6ff;
+    background: #1b222c;
+}
+
+/* PROJECT IMAGES */
+
+.project-image-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #b8d9f5;
+    background: linear-gradient(
+        135deg,
+        #1c4260,
+        #0d1b2a
+    );
+    font-weight: 600;
+}
+
+/* CARD CONTENT */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 28px;
+}
+
+.project-content h3 {
+    font-size: 1.55rem;
+    color: #58a6ff;
+    margin: 0 0 15px;
+}
+
+.project-content h4 {
+    font-size: 1.05rem;
+    color: #e6edf3;
+    margin: 12px 0;
+}
+
+.project-content p {
+    color: #c9d1d9;
+    line-height: 1.8;
+    margin: 0 0 16px;
+}
+
+/* STATUS LABELS */
+
+.project-status {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 6px 12px;
+    margin-bottom: 18px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #a9d7ff;
+    background: #233d55;
+    border-radius: 20px;
+}
+
+.project-status.planned {
+    color: #d1d5db;
+    background: #374151;
+}
+
+/* PROJECT FEATURES */
+
+.project-features {
+    padding-left: 22px;
+    margin: 0 0 24px;
+    color: #c9d1d9;
+}
+
+.project-features li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+/* CYBERSECURITY HIGHLIGHT */
+
+.security-focus {
+    background: rgba(88, 166, 255, 0.09);
+    border-left: 3px solid #58a6ff;
+    padding: 18px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.security-focus strong {
+    color: #79c0ff;
+}
+
+.security-focus p {
+    font-size: 0.92rem;
+    margin: 8px 0 0;
+}
+
+/* TECHNOLOGY TAGS */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: auto;
+}
+
+.tech-tags span {
+    background: #212e3e;
+    color: #b8dfff;
+    border: 1px solid #35516a;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+/* VIEW PROJECT BUTTON */
+
+.project-button {
+    display: inline-block;
+    align-self: flex-start;
+    background: #238636;
+    color: #ffffff;
+    padding: 12px 22px;
+    margin-top: 25px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.project-button:hover {
+    background: #2ea043;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.project-button:focus-visible {
+    outline: 3px solid #79c0ff;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   ROBOT PROJECT DETAILS PAGE
+========================================= */
+
+.robot-page {
+    width: calc(100% - 48px);
+    max-width: 1050px;
+    margin: 45px auto 90px;
+}
+
+.robot-back {
+    display: inline-block;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.robot-page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.robot-page-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 16px;
+}
+
+.robot-page-header p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #c9d1d9;
+    line-height: 1.8;
+}
+
+.robot-eyebrow {
+    display: inline-block;
+    color: #79c0ff;
+    background: #1b334b;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* CONTENT SECTIONS */
+
+.robot-section {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 50px;
+    box-sizing: border-box;
+}
+
+.robot-section h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.robot-section p,
+.robot-section li {
+    color: #c9d1d9;
+    line-height: 1.85;
+}
+
+.robot-section ul {
+    padding-left: 25px;
+}
+
+.robot-section li {
+    margin-bottom: 10px;
+}
+
+/* TECHNICAL INFORMATION CARDS */
+
+.robot-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 235px), 1fr)
+    );
+    gap: 18px;
+}
+
+.robot-detail-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 22px;
+    border-radius: 10px;
+}
+
+.robot-detail-card h3 {
+    margin-top: 0;
+}
+
+.robot-detail-card p {
+    margin-bottom: 0;
+}
+
+/* SECURITY SECTION */
+
+.robot-security {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-left: 4px solid #58a6ff;
+    padding: 28px;
+    border-radius: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .project-section,
+    .robot-page {
+        width: 92%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .robot-cover {
+        min-height: 240px;
+    }
+
+    .robot-security {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-section .project-card,
+    .project-button {
+        transition: none;
+    }
+
+    .project-section .project-card:hover {
+        transform: none;
+    }
+}
+
+/* =========================================
+   ROBOT PROJECT - THREE IMAGES
+========================================= */
+
+.robot-photo-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 16px;
+    padding: 12px;
+    align-items: start;
+}
+
+/* TWO WEBSITE SCREENSHOTS */
+
+.robot-dashboard-stack {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+}
+
+.robot-photo {
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+}
+
+.robot-photo img {
+    width: 100%;
+    display: block;
+    background: #0d1117;
+}
+
+/* SHOW ENTIRE SCREENSHOTS WITHOUT CROPPING */
+
+.robot-photo--dashboard img {
+    height: auto;
+    object-fit: contain;
+}
+
+/* ACTUAL ROBOT PHOTO */
+
+.robot-photo--robot img {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+/* IMAGE CAPTIONS */
+
+.robot-photo figcaption {
+    padding: 12px;
+    text-align: center;
+    color: #c9d1d9;
+    font-size: 0.9rem;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+    .robot-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .robot-dashboard-stack {
+        gap: 12px;
+    }
+}
+
+/* =========================================
+   PROJECTS NAVBAR DROPDOWN
+========================================= */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2000;
+    min-width: 210px;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.nav-dropdown:hover > .dropdown-menu,
+.nav-dropdown:focus-within > .dropdown-menu {
+    display: block;
+}
+
+.nav-links .dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links .dropdown-menu a {
+    display: block;
+    padding: 11px 16px;
+    color: #e6edf3;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.nav-links .dropdown-menu a:hover,
+.nav-links .dropdown-menu a:focus-visible {
+    background: #212b38;
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+#certificate-projects,
+#university-projects,
+#personal-projects {
+    scroll-margin-top: 110px;
+}
+
+/* MOBILE DROPDOWN */
+
+@media (max-width: 700px) {
+    .nav-links .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 190px;
+    }
+}
+
+/* =========================================
+   PROJECT LINKS
+========================================= */
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.project-links .project-button {
+    margin-top: 0;
+}
+
+.project-button--secondary {
+    background: #30363d;
+    border: 1px solid #484f58;
+}
+
+.project-button--secondary:hover {
+    background: #484f58;
+}
+
+/* =========================================
+   DOS TEST OUTPUT
+========================================= */
+
+.dos-output {
+    background: #090e14;
+    color: #a8e6ba;
+    padding: 22px;
+    margin: 22px 0;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.dos-output code {
+    font-family: inherit;
+    color: inherit;
+}
+
+@media (max-width: 700px) {
+    .dos-output {
+        padding: 14px;
+        font-size: 0.75rem;
+    }
+}

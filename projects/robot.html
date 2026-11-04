@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="SecuredRobotArmCar - Robotics, embedded systems, and cybersecurity project by Juan Chavez.">
+
+    <title>SecuredRobotArmCar | Juan Chavez</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="../index.html" class="nav-logo">
+                Juan Chavez | Cybersecurity Portfolio
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                
+                <!-- PROJECTS DROPDOWN -->
+                <li class="nav-dropdown">
+                
+                    <a href="../projects.html" class="active-link"
+                       aria-haspopup="true">
+                        Projects <span aria-hidden="true">&#9662;</span>
+                    </a>
+                
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="../projects.html#certificate-projects">
+                                Certificate Labs
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="../projects.html#university-projects">
+                                School Projects
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="../projects.html#personal-projects">
+                                Personal Projects
+                            </a>
+                        </li>
+                    </ul>
+                
+                </li>
+
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <main class="robot-page">
+
+        <!-- BACK TO PROJECTS -->
+        <a href="../projects.html" class="robot-back">
+            &larr; Back to Projects
+        </a>
+
+
+        <!-- PROJECT HEADER -->
+        <header class="robot-page-header">
+
+            <span class="robot-eyebrow">
+                PERSONAL PROJECT | ROBOTICS & CYBERSECURITY
+            </span>
+
+            <h1>SecuredRobotArmCar</h1>
+
+            <p>
+                Exploring robotics, embedded systems,
+                and cybersecurity through a mobile robotic
+                vehicle equipped with a robotic arm.
+            </p>
+
+        </header>
+
+        <!-- PROJECT OVERVIEW -->
+        <section class="robot-section">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                SecuredRobotArmCar is a personal project
+                combining a mobile robotic platform with
+                a robotic arm. The project explores how
+                software, hardware, and communication
+                systems interact to control a physical device.
+            </p>
+
+            <p>
+                The project also explores the importance
+                of cybersecurity in connected robotics.
+                When software is responsible for controlling
+                physical hardware, protecting communication
+                and control interfaces becomes an important
+                security consideration.
+            </p>
+
+            <p>
+                This project provides an opportunity to
+                investigate cyber-physical systems, device
+                communication, command handling, and
+                security-focused system design.
+            </p>
+
+        </section>
+
+
+        <!-- TECHNICAL OVERVIEW -->
+        <section class="robot-section">
+
+            <h2>Technical Overview</h2>
+
+            <div class="robot-detail-grid">
+
+                <div class="robot-detail-card">
+
+                    <h3>Robotic Vehicle</h3>
+
+                    <p>
+                        A mobile platform that supports
+                        physical movement and provides
+                        the foundation for the robotic
+                        system.
+                    </p>
+
+                </div>
+
+
+                <div class="robot-detail-card">
+
+                    <h3>Robotic Arm</h3>
+
+                    <p>
+                        A robotic manipulator integrated
+                        with the vehicle for controlled
+                        physical movement and interaction
+                        with objects.
+                    </p>
+
+                </div>
+
+
+                <div class="robot-detail-card">
+
+                    <h3>Embedded Systems</h3>
+
+                    <p>
+                        Exploring the relationship between
+                        electronic components, embedded
+                        control software, and physical
+                        hardware operations.
+                    </p>
+
+                </div>
+
+
+                <div class="robot-detail-card">
+
+                    <h3>Cybersecurity</h3>
+
+                    <p>
+                        Studying how access control,
+                        command validation, and secure
+                        communication principles relate
+                        to connected robotic systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT OBJECTIVES -->
+        <section class="robot-section">
+
+            <h2>Project Objectives</h2>
+
+            <ul>
+                <li>
+                    Integrate a mobile robotic vehicle
+                    with a robotic arm.
+                </li>
+
+                <li>
+                    Explore communication between
+                    software and hardware components.
+                </li>
+
+                <li>
+                    Understand how control commands
+                    affect physical robotic movement.
+                </li>
+
+                <li>
+                    Examine cybersecurity risks
+                    associated with connected devices.
+                </li>
+
+                <li>
+                    Document the design, operation,
+                    and testing of the robotic system.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- CYBERSECURITY -->
+        <section class="robot-section robot-security">
+
+            <h2>Cybersecurity Relevance</h2>
+
+            <p>
+                Robotics systems connect software
+                instructions to physical operations.
+                This creates security challenges
+                because unauthorized or unexpected
+                commands can affect real-world devices.
+            </p>
+
+            <p>
+                The following security principles
+                are relevant to the design and
+                evaluation of this project.
+            </p>
+
+            <h3>Security Considerations</h3>
+
+            <ul>
+                <li>
+                    <strong>Authentication:</strong>
+                    Verifying the identity of devices
+                    or users requesting control.
+                </li>
+
+                <li>
+                    <strong>Access Control:</strong>
+                    Restricting robotic operations
+                    to authorized controllers.
+                </li>
+
+                <li>
+                    <strong>Command Validation:</strong>
+                    Checking incoming control commands
+                    before executing them.
+                </li>
+
+                <li>
+                    <strong>Communication Security:</strong>
+                    Considering how commands and data
+                    should be protected in transit.
+                </li>
+
+                <li>
+                    <strong>System Reliability:</strong>
+                    Handling unexpected commands,
+                    communication failures, and
+                    potential system errors.
+                </li>
+            </ul>
+
+            <p>
+                Specific implemented security
+                mechanisms and verification results
+                will be documented in the project
+                implementation and testing sections.
+            </p>
+
+        </section>
+
+        <!-- SECURITY IMPLEMENTATION -->
+        <section class="robot-section">
+        
+            <h2>Security Implementation</h2>
+        
+            <p>
+                SecuredRobotArmCar uses an ESP32 microcontroller
+                to host a web-based control interface for a
+                four-wheel robotic vehicle with a 5DOF robotic arm.
+            </p>
+        
+            <p>
+                The system uses a modular C++ architecture
+                to separate robotic hardware functions
+                from web request handling and security logic.
+                This makes the project easier to maintain,
+                debug, and extend.
+            </p>
+        
+            <h3>Implemented Security Features</h3>
+        
+            <ul>
+                <li>
+                    <strong>PIN Authentication:</strong>
+                    Requires a valid PIN before allowing
+                    access to protected robot controls.
+                </li>
+            
+                <li>
+                    <strong>Brute-Force Protection:</strong>
+                    Tracks failed authentication attempts
+                    and temporarily restricts further attempts.
+                </li>
+            
+                <li>
+                    <strong>Intrusion Detection System:</strong>
+                    Monitors unauthorized requests,
+                    invalid session tokens, and repeated
+                    suspicious activity.
+                </li>
+            
+                <li>
+                    <strong>DoS Mitigation:</strong>
+                    Uses request rate limiting to restrict
+                    repeated unauthorized requests to
+                    the robot's web server.
+                </li>
+            
+                <li>
+                    <strong>Automatic Session Locking:</strong>
+                    Locks the control interface after
+                    a period of inactivity.
+                </li>
+            </ul>
+        
+            <h3>Security Limitations</h3>
+        
+            <p>
+                The project demonstrates several practical
+                embedded security mechanisms. However, the
+                FNV-1a-based session token mechanism is not
+                a cryptographically secure authentication method.
+                A production system would require stronger
+                authentication and transport security.
+            </p>
+        
+        </section>
+
+        
+        <!-- DOS MITIGATION TEST -->
+        <section class="robot-section">
+        
+            <h2>Denial-of-Service (DoS) Mitigation Testing</h2>
+        
+            <h3>Testing Objective</h3>
+        
+            <p>
+                One of the primary security objectives of
+                SecuredRobotArmCar was protecting its ESP32
+                web server from unauthorized access and
+                excessive HTTP requests.
+            </p>
+        
+            <p>
+                Because the ESP32 operates with limited
+                processing power and memory, excessive
+                network requests could interfere with
+                normal robotic operation.
+            </p>
+        
+            <p>
+                I created a Python script called
+                <code>dos_attack.py</code> to evaluate
+                how the server responds to repeated
+                unauthorized movement requests.
+            </p>
+        
+            <h3>Testing Methodology</h3>
+        
+            <p>
+                The Python script sends 12 rapid HTTP
+                requests to the robot's movement endpoint
+                without providing a valid authentication
+                session token.
+            </p>
+        
+            <p>
+                The purpose is to verify that unauthorized
+                commands are rejected and that repeated
+                failures trigger the server's intrusion
+                detection and rate-limiting mechanisms.
+            </p>
+        
+            <h3>Documented Example Output</h3>
+        
+            <p>
+                The following is an abbreviated,
+                formatted representation of the
+                example output documented in my
+                GitHub repository.
+            </p>
+        
+            <pre class="dos-output"><code>[+] Target: http://[ROBOT_IP]/move?dir=forward
+        [+] Sending 12 rapid unauthenticated requests...
+            
+        [1] HTTP 403 - Unauthorized request blocked
+        [2] HTTP 403 - Unauthorized request blocked
+        ...
+        [6] HTTP 429 - Client rate limited
+        [7] HTTP 429 - Client rate limited
+            
+        [+] Test complete</code></pre>
+            
+            <h3>Understanding the Output</h3>
+            
+            <p>
+                <strong>HTTP 403 - Forbidden:</strong>
+                The web server rejected an unauthorized
+                request. This indicates that the
+                authentication checks prevented the
+                request from proceeding normally.
+            </p>
+        
+            <p>
+                <strong>HTTP 429 - Too Many Requests:</strong>
+                After the configured threshold of
+                unauthorized requests was exceeded,
+                the server began limiting additional
+                requests from the client.
+            </p>
+        
+            <p>
+                <strong>Intrusion Detection:</strong>
+                The IDS tracks unauthorized attempts,
+                allowing the server to identify repeated
+                failures and apply request restrictions.
+            </p>
+        
+            <h3>Development Challenge</h3>
+        
+            <p>
+                During development, I identified a
+                request-handling issue where the robot's
+                locked state could reject incoming
+                requests before they reached the
+                intrusion detection logic.
+            </p>
+        
+            <p>
+                I addressed this by updating the
+                request-processing flow so that
+                suspicious requests are evaluated
+                by the IDS even when the robot is
+                already locked.
+            </p>
+        
+            <h3>Results and Limitations</h3>
+        
+            <p>
+                The documented test illustrates
+                authentication enforcement and
+                request throttling through HTTP
+                403 and 429 responses.
+            </p>
+        
+            <p>
+                This is a targeted security test,
+                not a comprehensive DoS resistance
+                benchmark. Additional testing would
+                be necessary to evaluate performance
+                under sustained network traffic.
+            </p>
+        
+            <p>
+                <a
+                    href="https://github.com/JuanChavez04/ArduinoRobotCarWithArm/blob/main/dos_attack.py"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Python Testing Script on GitHub &rarr;
+                </a>
+            </p>
+        
+        </section>
+
+
+        <!-- FUTURE IMPROVEMENTS -->
+        <section class="robot-section">
+
+            <h2>Future Improvements</h2>
+
+            <p>
+                Potential areas for future
+                experimentation and development
+                include:
+            </p>
+
+            <ul>
+                <li>
+                    Additional protection for
+                    robotic control interfaces.
+                </li>
+
+                <li>
+                    Improved error handling and
+                    command validation.
+                </li>
+
+                <li>
+                    Additional testing of communication
+                    and system reliability.
+                </li>
+
+                <li>
+                    Expanded cybersecurity-focused
+                    documentation and testing.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- RETURN TO PROJECTS -->
+        <a href="../projects.html" class="project-button">
+            &larr; Back to All Projects
+        </a>
+
+    </main>
+
+    <script src="../scripts/script.js"></script>
+
+</body>
+</html>

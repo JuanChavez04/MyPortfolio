@@ -16,7 +16,35 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active-link">Projects</a></li>
+                <!-- PROJECTS DROPDOWN -->
+                <li class="nav-dropdown">
+                
+                    <a href="projects.html" class="active-link"
+                       aria-haspopup="true">
+                        Projects <span aria-hidden="true">&#9662;</span>
+                    </a>
+                
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="projects.html#certificate-projects">
+                                Certificate Labs
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="projects.html#university-projects">
+                                School Projects
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="projects.html#personal-projects">
+                                Personal Projects
+                            </a>
+                        </li>
+                    </ul>
+                
+                </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -29,7 +57,7 @@
     </header>
 
     <!-- PROJECT ACCORDION -->
-    <section>
+    <section id ="certificate-projects">
         <h2>Professional Google Certificate Course Projects</h2>
                 <!-- COURSE 1 -->
         <button class="accordion">Course 2 - Play It Safe: Manage Security Risks</button>
@@ -166,12 +194,242 @@
         
     </section>
 
-    <section>
-        <h2>University of California, Merced Projects(in progress)</h2>
+    
+    <!-- UNIVERSITY PROJECTS -->
+    <section id="university-projects">
+        <h2>University of California, Merced Projects</h2>
+        <p>Project details will be added as coursework is completed.</p>
     </section>
 
-    <section>
-        <h2>Personal Projects(coming soon)</h2>
+     <!-- PERSONAL PROJECTS -->
+    <section class="project-section" id="personal-projects">
+        <div class="section-heading">
+            <h2>Personal Projects</h2>
+            <p>
+                Independent projects focused on applying
+                programming, engineering, and cybersecurity
+                concepts to real-world technologies.
+            </p>
+        </div>
+
+        <div class="project-grid">
+
+            <!-- SECURED ROBOT ARM CAR -->
+            <article class="project-card">
+
+                <!-- ROBOT PROJECT IMAGES -->
+                <div class="robot-photo-grid">
+                
+                    <!-- FULL WEBSITE SCREENSHOTS -->
+                    <div class="robot-dashboard-stack">
+                    
+                        <!-- TOP HALF OF WEBSITE -->
+                        <figure class="robot-photo robot-photo--dashboard">
+                            <img
+                                src="images/Screenshot 2026-11-04 083155.png"
+                                alt="Top section of the ESP32 robot web dashboard"
+                                loading="lazy"
+                            >
+                            <figcaption>
+                                Web Dashboard - Upper Section
+                            </figcaption>
+                        </figure>
+                    
+                        <!-- BOTTOM HALF OF WEBSITE -->
+                        <figure class="robot-photo robot-photo--dashboard">
+                            <img
+                                src="images/Screenshot 2026-11-04 083050.png"
+                                alt="Bottom section of the ESP32 robot web dashboard"
+                                loading="lazy"
+                            >
+                            <figcaption>
+                                Web Dashboard - Lower Section
+                            </figcaption>
+                        </figure>
+                    
+                    </div>
+                
+                    <!-- ACTUAL PHYSICAL ROBOT -->
+                    <figure class="robot-photo robot-photo--robot">
+                        <img
+                            src="images/IMG_3562.jpeg"
+                            alt="ESP32 robotic car with five-degree-of-freedom robotic arm"
+                            loading="lazy"
+                        >
+                        <figcaption>
+                            ESP32 Robot Car &amp; Robotic Arm
+                        </figcaption>
+                    </figure>
+                
+                </div>
+                <div class="project-content">
+                    <span class="project-status">
+                        Personal Project
+                    </span>
+                    <h3>SecuredRobotArmCar</h3>
+                    <p>
+                        A personal robotics project combining
+                        a mobile robotic vehicle and robotic arm
+                        with a focus on the interaction between
+                        hardware, software, and security.
+                    </p>
+                    <p>
+                        The project explores cyber-physical
+                        systems, embedded device control,
+                        and security considerations involved
+                        in communicating with and operating
+                        physical robotic devices.
+                    </p>
+                    <h4>Project Focus</h4>
+                    <ul class="project-features">
+                        <li>Robotic vehicle and arm integration</li>
+                        <li>Embedded systems and hardware control</li>
+                        <li>Device communication and command handling</li>
+                        <li>Cyber-physical security principles</li>
+                    </ul>
+                    <div class="security-focus">
+                        <strong>Cybersecurity Relevance</strong>
+                        <p>
+                            Explores security principles
+                            relevant to robotic systems,
+                            including protecting device
+                            control interfaces, validating
+                            commands, and reducing risks
+                            from unauthorized control.
+                        </p>
+                    </div>
+                    <div class="tech-tags">
+                        <span>Robotics</span>
+                        <span>Embedded Systems</span>
+                        <span>Cyber-Physical Systems</span>
+                        <span>Security Engineering</span>
+                    </div>
+                    
+                    <!-- PROJECT LINKS -->
+                    <div class="project-links">
+                    
+                        <a href="projects/robot.html" class="project-button">
+                            View Full Project &rarr;
+                        </a>
+                    
+                        <a
+                            href="https://github.com/JuanChavez04/ArduinoRobotCarWithArm"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button project-button--secondary"
+                        >
+                            View GitHub Repository &rarr;
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- PLANNED CYBERSECURITY PROJECTS -->
+    <section class="project-section planned-section"
+            id="planned-projects">
+        <div class="section-heading">
+            <h2>Upcoming Cybersecurity Projects</h2>
+            <p>
+                Projects I plan to develop to further
+                strengthen my practical cybersecurity
+                and software engineering skills.
+            </p>
+        </div>
+        <div class="project-grid">
+            <!-- PYTHON FILE INTEGRITY MONITOR -->
+            <article class="project-card">
+            
+                <div class="project-image-placeholder">
+                    Python File Integrity Monitor
+                    <br>
+                    Planned Cryptography Project
+                </div>
+            
+                <div class="project-content">
+                
+                    <span class="project-status planned">
+                        Planned
+                    </span>
+                
+                    <h3>Python File Integrity Monitor</h3>
+                
+                    <p>
+                        A planned cybersecurity application designed
+                        to detect unauthorized file modifications
+                        using cryptographic hashing and automated
+                        integrity verification.
+                    </p>
+                
+                    <p>
+                        This project will combine my independent
+                        study of cryptography with practical
+                        cybersecurity techniques, using Python
+                        and SHA-256 to monitor file integrity
+                        and identify unexpected changes.
+                    </p>
+                
+                    <h4>Planned Features</h4>
+                
+                    <ul class="project-features">
+                    
+                        <li>
+                            Generate SHA-256 cryptographic hashes
+                            for monitored files.
+                        </li>
+                    
+                        <li>
+                            Create a trusted baseline of file
+                            hashes for future comparison.
+                        </li>
+                    
+                        <li>
+                            Detect modified, deleted, and
+                            newly created files.
+                        </li>
+                    
+                        <li>
+                            Monitor selected directories for
+                            file changes and integrity violations.
+                        </li>
+                    
+                        <li>
+                            Generate timestamped security logs
+                            documenting detected modifications.
+                        </li>
+                    
+                        <li>
+                            Explore HMAC and digital signatures
+                            for strengthening baseline integrity
+                            verification.
+                        </li>
+                    
+                    </ul>
+                
+                    <div class="security-focus">
+                    
+                        <strong>Cybersecurity Relevance</strong>
+                    
+                        <p>
+                            Focuses on cryptographic hashing,
+                            file integrity monitoring, tamper
+                            detection, security logging, and
+                            automated defensive security.
+                        </p>
+                    
+                    </div>
+                
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>SHA-256</span>
+                        <span>Cryptography</span>
+                        <span>File Integrity</span>
+                        <span>Security Automation</span>
+                    </div>
+                </div>
+            </article>
+        </div>
     </section>
 
     <script src="scripts/script.js"></script>

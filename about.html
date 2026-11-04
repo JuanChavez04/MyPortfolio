@@ -14,7 +14,34 @@
             <a href="index.html" class="nav-logo">Juan Chavez | Cybersecurity Portfolio</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active-link">About</a></li>
+
+                <!-- PROJECTS DROPDOWN -->
+                <li class="nav-dropdown">
+                    <a href="projects.html" aria-haspopup="true">
+                        Projects <span aria-hidden="true">&#9662;</span>
+                    </a>
+                
+                    <ul class="dropdown-menu" aria-label="Project sections">
+                        <li>
+                            <a href="projects.html#certificate-projects">
+                                Certificate Labs
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="projects.html#university-projects">
+                                School Projects
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="projects.html#personal-projects">
+                                Personal Projects
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -79,8 +106,12 @@
             precision, and mechanical problem-solving — skills that surprisingly translate well into cybersecurity.
         </p>
         <p>
-            I’m also planning on working on a robotics project in the near future, 
-            which will allow me to explore the intersection of hardware and software security.
+            I have also developed SecuredRobotArmCar,
+            a robotics and cybersecurity project
+            combining an ESP32-controlled vehicle,
+            robotic arm, web-based controls, and
+            security mechanisms such as authentication,
+            intrusion detection, and request rate limiting.
         </p>
     </section>
 
